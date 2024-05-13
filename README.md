@@ -8,6 +8,7 @@
     git config --global user.name "<Your-Full-Name>"
   ```
   ```bash
+    # Exemplo
     git config --global user.name "Robert Oppenheimer"
   ```
   ```bash
@@ -15,7 +16,7 @@
     git config --global user.email "<your-email-address>"
   ```
   ```bash
-    # Configura o Git com seu e-mail
+    # Exemplo
     git config --global user.email "robert@oppenheimer.com"
   ```
 
