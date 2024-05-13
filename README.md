@@ -30,3 +30,4 @@
     # Lista todas as propriedades de configuração
     git config --list
   ```
+![gitConfig](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/55953a92-7e43-43d8-a347-1f4e1e38bd45)
