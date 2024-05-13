@@ -44,5 +44,16 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 
 ![gitBash](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/865d15a6-a227-4511-b33c-61da2af74149)
 
-## 3. Referências
+## 3. Criar um novo repositório na linha de comando
+  ```bash
+    echo "# teste" >> README.md # Criar o arquivo README.md com cabeçalho "# teste"
+    git init # Inicializa um novo repositório Git no diretório atual
+    git add README.md # Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
+    git commit -m "first commit" # Realiza o commit com uma mensagem de commit "first commit"
+    git branch -M main # Renomeia a branch padrão de "master" para "main"
+    git remote add origin https://github.com/elias-kento/teste.git # Adiciona um repositório remoto chamado "origin" com o URL fornecido
+    git push -u origin main # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
+  ```
+
+## Referências
 1. https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control
