@@ -54,6 +54,8 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
     git remote add origin https://github.com/elias-kento/teste.git # Adiciona um repositório remoto chamado "origin" com o URL fornecido
     git push -u origin main # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
   ```
+## 4. Revisando o Histórico do Repositório
+
 
 ## Referências
 1. https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control
