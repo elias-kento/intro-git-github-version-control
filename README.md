@@ -32,3 +32,17 @@
     git config --list
   ```
 ![gitConfig](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/55953a92-7e43-43d8-a347-1f4e1e38bd45)
+
+## 2. Trabalhando com um Repositório Local
+
+O Git acompanha as mudanças no seu código-fonte, permite o versionamento e suporta o desenvolvimento não linear através de milhares de ramificações paralelas sem a necessidade de internet.
+
+### 2.1. Inicializando um Repositório Git Local
+
+1. Em sua máquina local, crie uma nova pasta vazia.
+2. Clique com o botão direito dentro da pasta e selecione **Git Bash Here** nas opções.
+
+![gitBash](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/865d15a6-a227-4511-b33c-61da2af74149)
+
+## 3. Referências
+1. https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control
