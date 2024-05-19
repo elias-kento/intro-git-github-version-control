@@ -1,5 +1,5 @@
 # intro-git-github-version-control
-Repositório com comandos básicos do Git.
+Comandos básicos do Git.
 
 ## 1. Configurando o Git
 
@@ -7,7 +7,7 @@ Repositório com comandos básicos do Git.
   ```bash
     # git --version
   ```
-
+![version](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1bb1ecf-08a6-4905-88c1-e94bf1e73bbd)
 
 ### 1.2. Configure seu perfil do Git
   ```bash
