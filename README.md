@@ -68,6 +68,14 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
     # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
     git push -u origin main
   ```
+
+### 3.1. Listar os remotes criados e validar sua URL
+  ```bash
+    git remote
+    git remote get-url origin
+  ```
+![remote](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/b4c96880-f743-4cba-afdb-f73f18c4730b)
+
 ## 4. Revisando o Histórico do Repositório
 
 
