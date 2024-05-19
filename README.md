@@ -59,4 +59,5 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 
 
 ## Referências
-1. https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control
+1. [Introduction to Git, GitHub, and Version Control](https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control)
+2. [Entendendo GIT | (não é um tutorial!)](https://youtu.be/6Czd1Yetaac?si=Qs_UwvCp6nE0mVKo)
