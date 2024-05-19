@@ -3,7 +3,13 @@ Repositório com comandos básicos do Git.
 
 ## 1. Configurando o Git
 
-### 1.1. Configure seu perfil do Git
+### 1.1. Verificar a versão do Git instalada
+  ```bash
+    # git --version
+  ```
+
+
+### 1.2. Configure seu perfil do Git
   ```bash
     # Configura o Git com seu nome
     git config --global user.name "<Your-Full-Name>"
@@ -21,13 +27,13 @@ Repositório com comandos básicos do Git.
     git config --global user.email "robert@oppenheimer.com"
   ```
 
-### 1.2. Configure a cor de saída da interface do usuário
+### 1.3. Configure a cor de saída da interface do usuário
   ```bash
     # Garante que a saída do Git esteja colorida
     git config --global color.ui auto
    ```
 
-### 1.3. Reveja todas as opções de configuração
+### 1.4. Reveja todas as opções de configuração
   ```bash
     # Lista todas as propriedades de configuração
     git config --list
@@ -47,13 +53,20 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 
 ## 3. Criar um novo repositório na linha de comando
   ```bash
-    echo "# teste" >> README.md # Criar o arquivo README.md com cabeçalho "# teste"
-    git init # Inicializa um novo repositório Git no diretório atual
-    git add README.md # Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
-    git commit -m "first commit" # Realiza o commit com uma mensagem de commit "first commit"
-    git branch -M main # Renomeia a branch padrão de "master" para "main"
-    git remote add origin https://github.com/elias-kento/teste.git # Adiciona um repositório remoto chamado "origin" com o URL fornecido
-    git push -u origin main # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
+    # Criar o arquivo README.md com cabeçalho "# teste"
+    echo "# teste" >> README.md
+    # Inicializa um novo repositório Git no diretório atual
+    git init
+    # Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
+    git add README.md
+    # Realiza o commit com uma mensagem de commit "first commit"
+    git commit -m "first commit"
+    # Renomeia a branch padrão de "master" para "main"
+    git branch -M main
+    # Adiciona um repositório remoto chamado "origin" com o URL fornecido
+    git remote add origin https://github.com/elias-kento/teste.git
+    # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
+    git push -u origin main
   ```
 ## 4. Revisando o Histórico do Repositório
 
