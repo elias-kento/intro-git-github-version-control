@@ -1,4 +1,5 @@
 # intro-git-github-version-control
+Repositório com comandos básicos do Git.
 
 ## 1. Configurando o Git
 
