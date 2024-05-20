@@ -77,7 +77,7 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 ![remote](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/80ad1795-b51d-4d05-aff3-83c9b901af06)
 
 ## 4. Comandos básicos do Git
-![Imagem2](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/260702c4-0646-4d27-9d8c-2818ade7b5e4)
+![basico](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/2c8c9690-7e38-4e5d-840d-6394e8653019)
 
 ### 4.1. git status
 Este comando mostra o estado atual do seu repositório Git, incluindo arquivos modificados, arquivos prontos para serem commitados e outras informações relevantes.
