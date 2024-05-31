@@ -120,7 +120,7 @@ No Git, os arquivos em um repositório podem estar em vários estados possíveis
 3. **Modified (Modificado):** Arquivos que foram alterados no diretório de trabalho, mas ainda não foram adicionados à área de preparação. Eles estão em um estado de diferença em relação ao último commit.
 4. **Staged (Preparado ou Indexado):** Arquivos que foram modificados e, em seguida, adicionados à área de preparação usando git add. Esses arquivos estão prontos para serem incluídos no próximo commit.
 
-![arquivos](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/bc307745-3338-4640-8bf9-cf9dfec13291)
+![arquivos](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/5f8a59bd-cfa2-458a-afbc-49ce00da7a07)
 
 ## 6. Revisando o Histórico do Repositório
 
