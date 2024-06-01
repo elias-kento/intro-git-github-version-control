@@ -99,13 +99,31 @@ Este comando confirma as mudanças que foram adicionadas ao índice com o `git a
   ```
 
 ### 4.4. git log
-Mostra o histórico de commits do repositório Git, exibindo informações como autor, data e mensagem de cada commit.
+O comando `git log` é utilizado para exibir o histórico de commits de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
   ```bash
+    # Mostra o histórico de commits de forma padrão
     git log
+    # Exibe o histórico de commits em uma linha por commit, mostrando um resumo compacto
+    git log --oneline
+    # Mostra os diffs introduzidos por cada commit
+    git log -p
+    # Filtra commits por autor
+    git log --author=<nome>
   ```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
-### 4.5. git help
+`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
+
+### 4.5. git show
+O comando `git show` é usado para mostrar detalhes sobre um objeto específico no Git, geralmente um commit. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
+  ```bash
+    git show
+  ```
+![gitShow](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/bc44db11-c09e-47c0-8aa3-ecf4954e9359)
+
+`git show`: Mais adequado para inspecionar um commit específico em detalhe. Mostra não só as informações do commit, mas também o conteúdo das mudanças realizadas (diff). É uma ferramenta de inspeção profunda para um commit único.
+
+### 4.6. git help
 Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos.
   ```bash
     git help
