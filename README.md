@@ -140,9 +140,43 @@ No Git, os arquivos em um repositório podem estar em vários estados possíveis
 
 ![arquivos](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/5f8a59bd-cfa2-458a-afbc-49ce00da7a07)
 
-## 6. Revisando o Histórico do Repositório
+## 6. Branches
+Um branch no Git é uma ramificação do projeto principal, permitindo que os desenvolvedores trabalhem em funcionalidades novas, correções de bugs ou experimentações de forma isolada do código principal.
 
+### 6.1. Criando um Novo Branch
+Criando um novo branch chamado `testing`:
+  ```bash
+    git branch testing
+  ```
 
+### 6.2. Alternando entre Branches
+Vamos mudar para o novo branch `testing`:
+  ```bash
+    git checkout testing
+  ```
+
+### 6.3. Excluindo um Branch
+Excluir o branch `testing`:
+  ```bash
+    git branch -D testing
+  ```
+
+### 6.4. Comandos para visualizar a organização dos Branches
+  ```bash
+    git log --oneline --decorate
+    git log --oneline --decorate --graph --all
+  ```
+
+### 6.5. Mesclagem (Merge)
+- Primeiro, certifique-se de estar na branch em que você deseja realizar a mesclagem. Por exemplo, se você deseja mesclar mudanças da branch `feature` para a branch `main`, você deve estar na branch `main`.
+  ```bash
+    git checkout main
+  ```
+- Em seguida, execute o comando `git merge` seguido do nome da branch que você deseja mesclar. Neste caso, a branch `feature`.
+  ```bash
+    git merge feature
+  ```
+  
 ## Referências
 1. [Introduction to Git, GitHub, and Version Control](https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control)
 2. [Entendendo GIT | (não é um tutorial!)](https://youtu.be/6Czd1Yetaac?si=Qs_UwvCp6nE0mVKo)
