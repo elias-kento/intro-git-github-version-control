@@ -155,19 +155,25 @@ Vamos mudar para o novo branch `testing`:
     git checkout testing
   ```
 
-### 6.3. Excluindo um Branch
+### 6.3. Criando e Alternando para Branch
+Vamos criar e mudar para o novo branch `testing`:
+  ```bash
+    git checkout -b testing
+  ```
+
+### 6.4. Excluindo um Branch
 Excluir o branch `testing`:
   ```bash
     git branch -D testing
   ```
 
-### 6.4. Comandos para visualizar a organização dos Branches
+### 6.5. Comandos para visualizar a organização dos Branches
   ```bash
     git log --oneline --decorate
     git log --oneline --decorate --graph --all
   ```
 
-### 6.5. Mesclagem (Merge)
+### 6.6. Mesclagem (Merge)
 - Primeiro, certifique-se de estar na branch em que você deseja realizar a mesclagem. Por exemplo, se você deseja mesclar mudanças da branch `feature` para a branch `main`, você deve estar na branch `main`.
   ```bash
     git checkout main
