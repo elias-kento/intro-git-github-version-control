@@ -140,40 +140,46 @@ No Git, os arquivos em um repositório podem estar em vários estados possíveis
 
 ![arquivos](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/5f8a59bd-cfa2-458a-afbc-49ce00da7a07)
 
-## 6. Branches
+## 6. Clonar um repositório (git clone)
+O comando `git clone` é utilizado para copiar um repositório remoto do Git no computador. Para isso, basta navegar até o diretório onde você deseja copiar o repositório e usar o comando `git clone` seguido pela URL do repositório.
+  ```bash
+    git clone https://github.com/usuario/nome-do-repositorio.git
+  ```
+
+## 7. Branches
 Um branch no Git é uma ramificação do projeto principal, permitindo que os desenvolvedores trabalhem em funcionalidades novas, correções de bugs ou experimentações de forma isolada do código principal.
 
-### 6.1. Criando um Novo Branch
+### 7.1. Criando um Novo Branch
 Criando um novo branch chamado `testing`:
   ```bash
     git branch testing
   ```
 
-### 6.2. Alternando entre Branches
+### 7.2. Alternando entre Branches
 Vamos mudar para o novo branch `testing`:
   ```bash
     git checkout testing
   ```
 
-### 6.3. Criando e Alternando para Branch
+### 7.3. Criando e Alternando para Branch
 Vamos criar e mudar para o novo branch `testing`:
   ```bash
     git checkout -b testing
   ```
 
-### 6.4. Excluindo um Branch
+### 7.4. Excluindo um Branch
 Excluir o branch `testing`:
   ```bash
     git branch -D testing
   ```
 
-### 6.5. Comandos para visualizar a organização dos Branches
+### 7.5. Comandos para visualizar a organização dos Branches
   ```bash
     git log --oneline --decorate
     git log --oneline --decorate --graph --all
   ```
 
-### 6.6. Mesclagem (Merge)
+### 7.6. Mesclagem (Merge)
 - Primeiro, certifique-se de estar na branch em que você deseja realizar a mesclagem. Por exemplo, se você deseja mesclar mudanças da branch `feature` para a branch `main`, você deve estar na branch `main`.
   ```bash
     git checkout main
