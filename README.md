@@ -53,8 +53,8 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 
 ## 3. Criar um novo repositório na linha de comando
   ```bash
-    # Criar o arquivo README.md com cabeçalho "# teste"
-    echo "# teste" >> README.md
+    # Criar o arquivo README.md com cabeçalho "# Teste"
+    echo "# Teste" >> README.md
     # Inicializa um novo repositório Git no diretório atual
     git init
     # Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
