@@ -91,6 +91,10 @@ Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, prepar
   ```bash
     git add new-text-file.txt
   ```
+| Comando       | Novos Arquivos | Arquivos Modificados | Arquivos Removidos | Escopo                           |
+|---------------|----------------|----------------------|--------------------|----------------------------------|
+| `git add .`   | Sim            | Sim                  | Não                | Diretório atual e subdiretórios  |
+| `git add -A`  | Sim            | Sim                  | Sim                | Todo o repositório               |
 
 ### 4.3. git commit
 Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
