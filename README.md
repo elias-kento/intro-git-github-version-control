@@ -123,8 +123,19 @@ O comando `git show` é usado para mostrar detalhes sobre um objeto específico 
 
 `git show`: Mais adequado para inspecionar um commit específico em detalhe. Mostra não só as informações do commit, mas também o conteúdo das mudanças realizadas (diff). É uma ferramenta de inspeção profunda para um commit único.
 
-### 4.6. git help
-Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos.
+### 4.7. git diff
+O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
+  ```bash
+    # Mostra alterações não preparadas para commit
+    git diff
+    # Mostra todas as mudanças desde o último commit, incluindo as que estão no índice e as que ainda não estão
+    git diff HEAD
+    # Mostra alterações feitas no último commit
+    git diff HEAD^
+  ```
+
+### 4.8. git help
+Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos. Um sinal de adição (+) é exibido na frente das linhas que foram adicionadas e um sinal de subtração (-) indica as linhas que foram excluídas.
   ```bash
     git help
   ```
@@ -145,6 +156,9 @@ O comando `git clone` é utilizado para copiar um repositório remoto do Git no 
   ```bash
     git clone https://github.com/usuario/nome-do-repositorio.git
   ```
+
+## 7. Ignorar arquivos (.gitignore)
+*.gitignore* é um arquivo muito importante no mundo do Git, porque impede que arquivos incorretos sejam enviados para o controle de versão. Os arquivos .gitignore clichês podem ser encontrados [AQUI](https://github.com/github/gitignore).
 
 ## 7. Branches
 Um branch no Git é uma ramificação do projeto principal, permitindo que os desenvolvedores trabalhem em funcionalidades novas, correções de bugs ou experimentações de forma isolada do código principal.
@@ -188,7 +202,9 @@ Excluir o branch `testing`:
   ```bash
     git merge feature
   ```
-  
+## X. Observações
+1. As pessoas costumam se surpreender quando descobrem que o Git não considera a adição de um diretório vazio como sendo uma alteração. Isso ocorre porque o Git controla apenas as alterações em *arquivos*, não em diretórios.
+
 ## Referências
 1. [Introduction to Git, GitHub, and Version Control](https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control)
 2. [Entendendo GIT | (não é um tutorial!)](https://youtu.be/6Czd1Yetaac?si=Qs_UwvCp6nE0mVKo)
