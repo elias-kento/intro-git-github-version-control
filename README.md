@@ -107,6 +107,24 @@ Este comando é usado para modificar o último commit no seu repositório Git se
 
 :warning: É uma péssima ideia alterar os commits que foram compartilhados Com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
 
+  ```bash
+    # Passo 1: Crie e commite o arquivo inicialmente
+    echo "Conteúdo inicial" > arquivo1.txt
+    git add arquivo1.txt
+    git commit -m "Adicionar arquivo1.txt com conteúdo inicial"
+    
+    # Passo 2: Perceba que esqueceu de adicionar mais conteúdo
+    
+    # Passo 3: Faça a alteração esquecida em arquivo1.txt
+    echo "Conteúdo adicional" >> arquivo1.txt
+    
+    # Passo 4: Adicione a alteração ao índice
+    git add arquivo1.txt
+    
+    # Passo 5: Emende o commit anterior
+    git commit --amend --no-edit
+   ```
+
 ### 4.4. git diff
 O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
   ```bash
