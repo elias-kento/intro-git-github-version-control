@@ -102,7 +102,18 @@ Este comando confirma as mudanças que foram adicionadas ao índice com o `git a
     git commit -m "message"
   ```
 
-### 4.4. git log
+### 4.4. git diff
+O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
+  ```bash
+    # Mostra alterações não preparadas para commit
+    git diff
+    # Mostra todas as mudanças desde o último commit, incluindo as que estão no índice e as que ainda não estão
+    git diff HEAD
+    # Mostra alterações feitas no último commit
+    git diff HEAD^
+  ```
+
+### 4.5. git log
 O comando `git log` é utilizado para exibir o histórico de commits de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
   ```bash
     # Mostra o histórico de commits de forma padrão
@@ -118,7 +129,7 @@ O comando `git log` é utilizado para exibir o histórico de commits de um repos
 
 `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
-### 4.5. git show
+### 4.6. git show
 O comando `git show` é usado para mostrar detalhes sobre um objeto específico no Git, geralmente um commit. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
   ```bash
     git show
@@ -127,18 +138,7 @@ O comando `git show` é usado para mostrar detalhes sobre um objeto específico 
 
 `git show`: Mais adequado para inspecionar um commit específico em detalhe. Mostra não só as informações do commit, mas também o conteúdo das mudanças realizadas (diff). É uma ferramenta de inspeção profunda para um commit único.
 
-### 4.7. git diff
-O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
-  ```bash
-    # Mostra alterações não preparadas para commit
-    git diff
-    # Mostra todas as mudanças desde o último commit, incluindo as que estão no índice e as que ainda não estão
-    git diff HEAD
-    # Mostra alterações feitas no último commit
-    git diff HEAD^
-  ```
-
-### 4.8. git help
+### 4.7. git help
 Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos. Um sinal de adição (+) é exibido na frente das linhas que foram adicionadas e um sinal de subtração (-) indica as linhas que foram excluídas.
   ```bash
     git help
