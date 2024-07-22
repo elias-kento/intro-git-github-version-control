@@ -192,3 +192,4 @@ Excluir o branch `testing`:
 ## Referências
 1. [Introduction to Git, GitHub, and Version Control](https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control)
 2. [Entendendo GIT | (não é um tutorial!)](https://youtu.be/6Czd1Yetaac?si=Qs_UwvCp6nE0mVKo)
+3. [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
