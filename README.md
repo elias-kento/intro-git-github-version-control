@@ -38,7 +38,7 @@ Tutorial de uso do Git e GitHub.
     # Lista todas as propriedades de configuração
     git config --list
   ```
-![gitConfig](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/55953a92-7e43-43d8-a347-1f4e1e38bd45)
+![2024-07-21_23-42-01_v05](https://github.com/user-attachments/assets/98e03911-3fd8-44cc-9e8c-f4b9fdd110e0)
 
 ## 2. Trabalhando com um Repositório Local
 
