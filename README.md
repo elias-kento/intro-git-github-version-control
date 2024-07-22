@@ -102,6 +102,11 @@ Este comando confirma as mudanças que foram adicionadas ao índice com o `git a
     git commit -m "message"
   ```
 
+#### 4.3.1. git commit --amend --no-edit
+Este comando é usado para modificar o último commit no seu repositório Git sem alterar sua mensagem de commit. Isso é útil quando você deseja adicionar mais mudanças ao commit mais recente ou corrigir algo que você esqueceu de incluir.
+
+:warning: É uma péssima ideia alterar os commits que foram compartilhados Com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
+
 ### 4.4. git diff
 O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
   ```bash
@@ -213,3 +218,4 @@ Excluir o branch `testing`:
 1. [Introduction to Git, GitHub, and Version Control](https://github.com/microsoft/workshop-library/tree/main/full/intro-git-github-version-control)
 2. [Entendendo GIT | (não é um tutorial!)](https://youtu.be/6Czd1Yetaac?si=Qs_UwvCp6nE0mVKo)
 3. [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+4. [Emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet/tree/master)
