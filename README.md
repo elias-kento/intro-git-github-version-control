@@ -162,7 +162,7 @@ O comando `git clone` é utilizado para copiar um repositório remoto do Git no 
   ```
 
 ## 7. Ignorar arquivos (.gitignore)
-*.gitignore* é um arquivo muito importante no mundo do Git, porque impede que arquivos incorretos sejam enviados para o controle de versão. Os arquivos .gitignore clichês podem ser encontrados [AQUI](https://github.com/github/gitignore).
+*.gitignore* é um arquivo muito importante no mundo do Git, porque impede que arquivos incorretos sejam enviados para o controle de versão. Os arquivos *.gitignore* clichês podem ser encontrados [AQUI](https://github.com/github/gitignore).
 
 ## 7. Branches
 Um branch no Git é uma ramificação do projeto principal, permitindo que os desenvolvedores trabalhem em funcionalidades novas, correções de bugs ou experimentações de forma isolada do código principal.
