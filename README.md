@@ -1,4 +1,4 @@
-# intro-git-github-version-control
+# Git e GitHub: Primeiros Passos
 Tutorial de uso do Git e GitHub.
 
 ## 1. Configurando o Git
