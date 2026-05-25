@@ -169,7 +169,6 @@ Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diverso
 
 ### 4.8. git clone
 O comando `git clone` é utilizado para criar uma cópia local de um repositório remoto. Ao executar esse comando, o Git baixa todos os arquivos, branches e o histórico de commits do repositório para o seu computador.
-
   ```bash
     git clone <url-do-repositorio>
   ```
@@ -189,18 +188,15 @@ Para verificar o diretório atual:
   ```
 
 #### 4.8.1. Evitando repositórios Git aninhados
-
 Antes de utilizar o comando `git clone`, é importante verificar em qual diretório o terminal está localizado. O comando `git clone` cria automaticamente uma nova pasta contendo um repositório Git.
 
 Um erro comum é executar o `git clone` dentro de outro repositório Git já existente, criando um repositório Git dentro de outro.
 
 #### Cenário correto
-
 Você já está em uma pasta comum:
-
-```text
-meu-repo/
-```
+  ```text
+    meu-repo/
+  ```
 
 E executa:
   ```bash
@@ -208,21 +204,19 @@ E executa:
   ```
 
 Resultado:
-```text
-meu-repo/
-└── app/
-    └── .git/
-```
+  ```text
+    meu-repo/
+    └── app/
+        └── .git/
+  ```
 Tudo certo.
 
 #### Cenário errado
-
 Você já está dentro de um repositório Git:
-
-```text
-meu-repo/
-└── .git/
-```
+  ```text
+    meu-repo/
+    └── .git/
+  ```
 
 E executa:
   ```bash
@@ -230,13 +224,49 @@ E executa:
   ```
 
 Resultado:
-```text
-meu-repo/
-└── .git/
-└── app/
+  ```text
+    meu-repo/
     └── .git/
-```
+    └── app/
+        └── .git/
+  ```
 Agora existe um Git dentro de outro Git.
+
+#### 4.8.2. Clonando para um diretório com outro nome
+Por padrão, o Git cria uma pasta com o mesmo nome do repositório remoto. Porém, é possível definir manualmente o nome da pasta local adicionando um argumento extra ao comando `git clone`.
+
+Você já está em uma pasta comum:
+  ```text
+    meu-repo/
+  ```
+
+E executa:
+  ```bash
+    git clone https://github.com/user/app.git
+  ```
+
+Nesse exemplo, o repositório será clonado para um diretório chamado `app`.
+
+Resultado:
+  ```text
+    meu-repo/
+    └── app/
+        └── .git/
+  ```
+
+Mas, se executar:
+  ```bash
+    git clone https://github.com/user/app.git meu_app
+  ```
+
+O repositório será clonado para um diretório chamado `meu_app`.
+
+Resultado:
+  ```text
+    meu-repo/
+    └── meu_app/
+        └── .git/
+  ```
 
 ## 5. Estado dos arquivos
 No Git, os arquivos em um repositório podem estar em vários estados possíveis. Esses estados refletem a situação dos arquivos em relação ao repositório, à área de preparo (staging area) e ao diretório de trabalho (working directory). Aqui estão os principais estados possíveis dos arquivos no Git:
