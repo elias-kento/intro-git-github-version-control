@@ -167,6 +167,77 @@ Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diverso
   ```
 ![help](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/151b65d6-f140-4c8c-85a6-37c54f720f7d)
 
+### 4.8. git clone
+O comando `git clone` é utilizado para criar uma cópia local de um repositório remoto. Ao executar esse comando, o Git baixa todos os arquivos, branches e o histórico de commits do repositório para o seu computador.
+
+  ```bash
+    git clone <url-do-repositorio>
+  ```
+
+Exemplo:
+  ```bash
+    git clone https://github.com/udacity/course-git-blog-project
+  ```
+
+Após executar o comando, uma nova pasta com o nome do repositório será criada automaticamente no diretório atual.
+
+:warning: Antes de utilizar o `git clone`, verifique se o diretório atual do terminal não está dentro de outro repositório Git, evitando criar repositórios aninhados.
+
+Para verificar o diretório atual:
+  ```bash
+    pwd
+  ```
+
+#### 4.8.1. Evitando repositórios Git aninhados
+
+Antes de utilizar o comando `git clone`, é importante verificar em qual diretório o terminal está localizado. O comando `git clone` cria automaticamente uma nova pasta contendo um repositório Git.
+
+Um erro comum é executar o `git clone` dentro de outro repositório Git já existente, criando um repositório Git dentro de outro.
+
+#### Cenário correto
+
+Você já está em uma pasta comum:
+
+```text
+meu-repo/
+```
+
+E executa:
+  ```bash
+    git clone https://github.com/user/app.git
+  ```
+
+Resultado:
+```text
+meu-repo/
+└── app/
+    └── .git/
+```
+Tudo certo.
+
+#### Cenário errado
+
+Você já está dentro de um repositório Git:
+
+```text
+meu-repo/
+└── .git/
+```
+
+E executa:
+  ```bash
+    git clone https://github.com/user/app.git
+  ```
+
+Resultado:
+```text
+meu-repo/
+└── .git/
+└── app/
+    └── .git/
+```
+Agora existe um Git dentro de outro Git.
+
 ## 5. Estado dos arquivos
 No Git, os arquivos em um repositório podem estar em vários estados possíveis. Esses estados refletem a situação dos arquivos em relação ao repositório, à área de preparo (staging area) e ao diretório de trabalho (working directory). Aqui estão os principais estados possíveis dos arquivos no Git:
 
@@ -177,13 +248,7 @@ No Git, os arquivos em um repositório podem estar em vários estados possíveis
 
 ![arquivos](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/5f8a59bd-cfa2-458a-afbc-49ce00da7a07)
 
-## 6. Clonar um repositório (git clone)
-O comando `git clone` é utilizado para copiar um repositório remoto do Git no computador. Para isso, basta navegar até o diretório onde você deseja copiar o repositório e usar o comando `git clone` seguido pela URL do repositório.
-  ```bash
-    git clone https://github.com/usuario/nome-do-repositorio.git
-  ```
-
-## 7. Ignorar arquivos (.gitignore)
+## 6. Ignorar arquivos (.gitignore)
 *.gitignore* é um arquivo muito importante no mundo do Git, porque impede que arquivos incorretos sejam enviados para o controle de versão. Os arquivos *.gitignore* clichês podem ser encontrados [AQUI](https://github.com/github/gitignore).
 
 ## 7. Branches
