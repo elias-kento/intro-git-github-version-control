@@ -136,7 +136,7 @@ O comando `git diff` é utilizado no Git para comparar alterações entre commit
   ```
 
 ### 4.5. git log
-O comando `git log` é utilizado para exibir o histórico de commits de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
+O comando `git log` é utilizado para **exibir o histórico de commits** de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
   ```bash
     # Mostra o histórico de commits de forma padrão
     git log
@@ -152,7 +152,7 @@ O comando `git log` é utilizado para exibir o histórico de commits de um repos
 `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 ### 4.6. git show
-O comando `git show` é usado para mostrar detalhes sobre um objeto específico no Git, geralmente um commit. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
+O comando `git show` é usado para **mostrar detalhes sobre um objeto específico no Git, geralmente um commit**. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
   ```bash
     git show
   ```
