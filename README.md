@@ -151,6 +151,19 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
 
 `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
+#### 4.5.1. Teclas de atalho
+- `↑` ou `k` → subir uma linha
+- `↓` ou `j` → descer uma linha
+- `Page Up` → subir uma página
+- `Page Down` → descer uma página
+- `Space` → próxima página
+- `b` → página anterior
+- `g` → ir para o início
+- `G` → ir para o final
+- `/texto` → pesquisar um texto
+- `n` → próxima ocorrência da busca
+- `q` → sair do `git log`
+
 ### 4.6. git show
 O comando `git show` é usado para **mostrar detalhes sobre um objeto específico no Git, geralmente um commit**. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
   ```bash
