@@ -154,6 +154,10 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
   ```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
+Comparação entre `git log` e `git log --oneline`:
+
+<img width="370" height="108" alt="Image" src="https://github.com/user-attachments/assets/dcb72520-fed6-4683-92de-c1f7c8470646" />
+
 :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 #### 4.6.1. Teclas de atalho
