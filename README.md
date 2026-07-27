@@ -82,6 +82,8 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 ### 4.1. start .
 No Windows, abre no Explorador de Arquivos a pasta atual do terminal.
 
+![start](https://github.com/user-attachments/assets/93c45239-1d3b-4702-b757-11dadf7eb3dd)
+
 ### 4.2. git status
 Este comando mostra o **estado atual** do seu repositório Git, incluindo arquivos modificados, arquivos prontos para serem commitados e outras informações relevantes.
   ```bash
