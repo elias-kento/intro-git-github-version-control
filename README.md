@@ -157,6 +157,9 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
 :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 #### 4.6.1. Teclas de atalho
+> O Git utiliza um programa chamado `less` como **paginador** (*pager*). O `less` permite navegar pelo conteúdo utilizando o teclado, avançando ou retornando linhas e páginas, além de possibilitar a pesquisa de textos. Enquanto o paginador estiver aberto, o terminal não estará travado: basta pressionar `q` para encerrá-lo e retornar ao prompt de comandos.
+
+Principais teclas de navegação do `less`:
 - `↑` ou `k` → subir uma linha
 - `↓` ou `j` → descer uma linha
 - `Page Up` → subir uma página
