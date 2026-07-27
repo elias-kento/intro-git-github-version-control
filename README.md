@@ -79,14 +79,17 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 ## 4. Comandos básicos do Git
 ![basico](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/1c5ff94b-0623-4047-aecd-9792eab3240b)
 
-### 4.1. git status
+### 4.1. start .
+No Windows, abre no Explorador de Arquivos a pasta atual do terminal.
+
+### 4.2. git status
 Este comando mostra o estado atual do seu repositório Git, incluindo arquivos modificados, arquivos prontos para serem commitados e outras informações relevantes.
   ```bash
     git status
   ```
 ![status](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/90bab51a-8b7a-497c-91b5-8b1527633c90)
 
-### 4.2. git add
+### 4.3. git add
 Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
   ```bash
     git add new-text-file.txt
@@ -96,13 +99,13 @@ Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, prepar
 | `git add .`   | Sim            | Sim                  | Não                | Diretório atual e subdiretórios  |
 | `git add -A`  | Sim            | Sim                  | Sim                | Todo o repositório               |
 
-### 4.3. git commit
+### 4.4. git commit
 Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
   ```bash
     git commit -m "message"
   ```
 
-#### 4.3.1. git commit --amend --no-edit
+#### 4.4.1. git commit --amend --no-edit
 Este comando é usado para modificar o último commit no seu repositório Git sem alterar sua mensagem de commit. Isso é útil quando você deseja adicionar mais mudanças ao commit mais recente ou corrigir algo que você esqueceu de incluir.
 
   ```bash
@@ -124,7 +127,7 @@ Este comando é usado para modificar o último commit no seu repositório Git se
    ```
 :warning: É uma péssima ideia alterar os commits que foram compartilhados com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
 
-### 4.4. git diff
+### 4.5. git diff
 O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
   ```bash
     # Mostra alterações não preparadas para commit
@@ -135,7 +138,7 @@ O comando `git diff` é utilizado no Git para comparar alterações entre commit
     git diff HEAD^
   ```
 
-### 4.5. git log
+### 4.6. git log
 O comando `git log` é utilizado para **exibir o histórico de commits** de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
   ```bash
     # Mostra o histórico de commits de forma padrão
@@ -151,7 +154,7 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
 
 :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
-#### 4.5.1. Teclas de atalho
+#### 4.6.1. Teclas de atalho
 - `↑` ou `k` → subir uma linha
 - `↓` ou `j` → descer uma linha
 - `Page Up` → subir uma página
@@ -164,7 +167,7 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
 - `n` → próxima ocorrência da busca
 - `q` → sair do `git log`
 
-### 4.6. git show
+### 4.7. git show
 O comando `git show` é usado para **mostrar detalhes sobre um objeto específico no Git, geralmente um commit**. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
   ```bash
     git show
@@ -173,14 +176,14 @@ O comando `git show` é usado para **mostrar detalhes sobre um objeto específic
 
 :bulb:`git show`: Mais adequado para inspecionar um commit específico em detalhe. Mostra não só as informações do commit, mas também o conteúdo das mudanças realizadas (diff). É uma ferramenta de inspeção profunda para um commit único.
 
-### 4.7. git help
+### 4.8. git help
 Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos. Um sinal de adição (+) é exibido na frente das linhas que foram adicionadas e um sinal de subtração (-) indica as linhas que foram excluídas.
   ```bash
     git help
   ```
 ![help](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/151b65d6-f140-4c8c-85a6-37c54f720f7d)
 
-### 4.8. git clone
+### 4.9. git clone
 O comando `git clone` é utilizado para criar uma cópia local de um repositório remoto. Ao executar esse comando, o Git baixa todos os arquivos, branches e o histórico de commits do repositório para o seu computador.
   ```bash
     git clone <url-do-repositorio>
@@ -200,7 +203,7 @@ Para verificar o diretório atual:
     pwd
   ```
 
-#### 4.8.1. Evitando repositórios Git aninhados
+#### 4.9.1. Evitando repositórios Git aninhados
 Antes de utilizar o comando `git clone`, é importante verificar em qual diretório o terminal está localizado. O comando `git clone` cria automaticamente uma nova pasta contendo um repositório Git.
 
 Um erro comum é executar o `git clone` dentro de outro repositório Git já existente, criando um repositório Git dentro de outro.
@@ -245,7 +248,7 @@ Resultado:
   ```
 Agora existe um Git dentro de outro Git.
 
-#### 4.8.2. Clonando para um diretório com outro nome
+#### 4.9.2. Clonando para um diretório com outro nome
 Por padrão, o Git cria uma pasta com o mesmo nome do repositório remoto. Porém, é possível definir manualmente o nome da pasta local adicionando um argumento extra ao comando `git clone`.
 
 Você já está em uma pasta comum:
