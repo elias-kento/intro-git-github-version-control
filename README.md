@@ -145,12 +145,16 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
   ```bash
     # Mostra o histórico de commits de forma padrão
     git log
+
     # Exibe o histórico de commits em uma linha por commit, mostrando um resumo compacto
     git log --oneline
+
     # Mostra os diffs introduzidos por cada commit
     git log -p
+
     # Filtra commits por autor
     git log --author=<nome>
+
     # Mostra um resumo das alterações de cada commit, incluindo os arquivos modificados
     # e a quantidade de linhas adicionadas e removidas
     git log --stat
