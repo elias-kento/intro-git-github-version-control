@@ -171,7 +171,119 @@ Exemplo de uso do comando `git log --stat`:
 
 Exemplo de uso do comando `git log -p`:
 
-![stat](https://github.com/user-attachments/assets/1fda6117-24e0-4035-8a49-394e142f8e1d)
+![patch](https://github.com/user-attachments/assets/40a933aa-6044-476f-a774-2cae71cbd162)
+
+> ### Entendendo a saída do comando `git log -p`
+
+O comando:
+
+```bash
+git log -p
+```
+
+mostra o histórico de commits do repositório e o **patch** associado a cada um deles. Um patch apresenta as diferenças entre a versão anterior e a nova versão dos arquivos modificados pelo commit.
+
+Na figura, a área delimitada pelo retângulo roxo corresponde ao patch do commit cuja mensagem é:
+
+```text
+Center content on page
+```
+
+Esse commit modificou o arquivo `css/app.css`.
+
+#### A — Identificação do arquivo comparado
+
+```text
+diff --git a/css/app.css b/css/app.css
+```
+
+Essa linha indica que o Git está comparando duas versões do arquivo `css/app.css`.
+
+Por convenção:
+
+- `a/css/app.css` representa a versão anterior do arquivo;
+- `b/css/app.css` representa a nova versão do arquivo.
+
+As letras `a` e `b` não fazem parte do nome original do arquivo. Elas são prefixos utilizados pelo Git para diferenciar as duas versões.
+
+#### B — Identificadores das versões do arquivo
+
+```text
+index 07c36fa..3cbd0b8 100644
+```
+
+Os valores `07c36fa` e `3cbd0b8` são identificadores abreviados das versões do conteúdo do arquivo:
+
+- `07c36fa`: conteúdo anterior;
+- `3cbd0b8`: conteúdo posterior.
+
+O número `100644` representa o modo do arquivo. Nesse caso, indica que se trata de um arquivo comum e não executável.
+
+#### C — Arquivo anterior e arquivo posterior
+
+```text
+--- a/css/app.css
++++ b/css/app.css
+```
+
+Essas linhas identificam as duas versões utilizadas na comparação:
+
+- `---` identifica a versão anterior;
+- `+++` identifica a nova versão.
+
+É importante não confundir esses três sinais com os sinais usados nas linhas individuais do patch. No conteúdo do patch, um único `+` indica uma linha adicionada e um único `-` indica uma linha removida.
+
+#### D — Cabeçalho do trecho alterado
+
+```text
+@@ -38,6 +38,11 @@
+```
+
+Essa linha é chamada de **cabeçalho do trecho** ou **cabeçalho do bloco de alterações**. Ela informa a localização e a quantidade de linhas apresentadas em cada versão.
+
+- `-38,6`: na versão anterior, o trecho começa na linha 38 e contém 6 linhas;
+- `+38,11`: na nova versão, o trecho começa na linha 38 e contém 11 linhas.
+
+O sinal `-` está relacionado à versão anterior, enquanto o sinal `+` está relacionado à nova versão.
+
+### Numeração das linhas
+
+Na figura, os marcadores coloridos representam a contagem das linhas informada no cabeçalho do trecho:
+
+- os marcadores **laranja** numeram as 6 linhas da versão anterior;
+- os marcadores **verdes** numeram as 11 linhas da nova versão.
+
+As linhas que começam com `+` foram adicionadas pelo commit:
+
+```diff
++.container {
++    margin: auto;
++    max-width: 1300px;
++}
++
+```
+
+Essas cinco linhas pertencem apenas à nova versão. Por isso, elas recebem somente a numeração verde.
+
+As linhas que não começam com `+` nem com `-` são chamadas de **linhas de contexto**. Elas não foram modificadas e aparecem apenas para facilitar a compreensão da região em que a alteração ocorreu.
+
+Como as linhas de contexto existem nas duas versões, elas recebem simultaneamente:
+
+- uma numeração laranja, referente à versão anterior;
+- uma numeração verde, referente à nova versão.
+
+Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas. Por isso, o trecho passou de 6 linhas na versão anterior para 11 linhas na nova versão: 11 = 6 + 5
+
+### Resumo dos sinais do patch
+
+| Símbolo | Significado |
+|:---:|---|
+| `+` | Linha adicionada na nova versão |
+| `-` | Linha removida da versão anterior |
+| espaço | Linha de contexto, sem alteração |
+| `---` | Identificação do arquivo anterior |
+| `+++` | Identificação do novo arquivo |
+| `@@` | Delimitação do cabeçalho do trecho alterado |
 
 :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
