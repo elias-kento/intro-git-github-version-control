@@ -169,6 +169,10 @@ Exemplo de uso do comando `git log --stat`:
 
 ![stat](https://github.com/user-attachments/assets/a450d83e-7989-4574-a8a3-29c0fc61f2dd)
 
+Exemplo de uso do comando `git log -p`:
+
+![stat](https://github.com/user-attachments/assets/1fda6117-24e0-4035-8a49-394e142f8e1d)
+
 :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 #### 4.6.1. Teclas de atalho
