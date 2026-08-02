@@ -100,11 +100,11 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
     # Exibe o histórico de commits em uma linha por commit, mostrando um resumo compacto
     git log --oneline
 
-    # Mostra os diffs introduzidos por cada commit (mesmo que --patch)
+    # Mostra o patch, isto é, as alterações introduzidas por cada commit (mesmo que --patch)
     git log -p
 
-    # Filtra commits por autor
-    git log --author=<nome>
+    # Filtra os commits pelo nome ou e-mail do autor
+    git log --author="<nome-ou-email>"
 
     # Mostra um resumo das alterações de cada commit, incluindo os arquivos modificados
     # e a quantidade de linhas adicionadas e removidas
@@ -112,7 +112,7 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
   ```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
-> :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
+> :bulb: `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 - Comparação entre `git log` e `git log --oneline`:
 
@@ -128,7 +128,7 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
 
 > #### Entendendo a saída do comando `git log -p`
 
-O comando `git log --stat` mostra o histórico de commits do repositório e o **patch** associado a cada um deles. Um patch apresenta as diferenças entre a versão anterior e a nova versão dos arquivos modificados pelo commit.
+O comando `git log -p` mostra o histórico de commits do repositório e o **patch** associado a cada um deles. Um patch apresenta as diferenças entre a versão anterior e a nova versão dos arquivos modificados pelo commit.
 
 Na figura, a área delimitada pelo retângulo roxo corresponde ao patch do commit cuja mensagem é:
 
@@ -232,10 +232,11 @@ Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas
 | `+++` | Identificação do novo arquivo |
 | `@@` | Delimitação do cabeçalho do trecho alterado |
 
-#### 4.3.1. Teclas de atalho
+#### Teclas de atalho
 > O Git utiliza um programa chamado `less` como **paginador** (*pager*). O `less` permite navegar pelo conteúdo utilizando o teclado, avançando ou retornando linhas e páginas, além de possibilitar a pesquisa de textos. Enquanto o paginador estiver aberto, o terminal não estará travado: basta pressionar `q` para encerrá-lo e retornar ao prompt de comandos.
 
 Principais teclas de navegação do `less`:
+
 - `↑` ou `k` → subir uma linha
 - `↓` ou `j` → descer uma linha
 - `Page Up` → subir uma página
@@ -293,7 +294,7 @@ git show --stat -p <hash-do-commit>
 git show -w <hash-do-commit>
 ```
 
-> :bulb:`git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
+>  `git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
 
 ### 4.5. git add
 Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
