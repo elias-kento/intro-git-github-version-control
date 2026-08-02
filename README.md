@@ -244,7 +244,7 @@ O sinal `-` está relacionado à versão anterior, enquanto o sinal `+` está re
 
 Na figura, os marcadores coloridos representam a contagem das linhas informada no cabeçalho do trecho:
 
-- os marcadores **laranja** numeram as 6 linhas da versão anterior;
+- os marcadores **amarelos** numeram as 6 linhas da versão anterior;
 - os marcadores **verdes** numeram as 11 linhas da nova versão.
 
 As linhas que começam com `+` foram adicionadas pelo commit:
