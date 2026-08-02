@@ -285,7 +285,7 @@ Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas
 | `+++` | Identificação do novo arquivo |
 | `@@` | Delimitação do cabeçalho do trecho alterado |
 
-:bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
+> :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 #### 4.6.1. Teclas de atalho
 > O Git utiliza um programa chamado `less` como **paginador** (*pager*). O `less` permite navegar pelo conteúdo utilizando o teclado, avançando ou retornando linhas e páginas, além de possibilitar a pesquisa de textos. Enquanto o paginador estiver aberto, o terminal não estará travado: basta pressionar `q` para encerrá-lo e retornar ao prompt de comandos.
@@ -303,6 +303,52 @@ Principais teclas de navegação do `less`:
 - `n` → próxima ocorrência da busca
 - `q` → sair do `git log`
 
+### 4.7. `git show`
+
+O comando `git show` é utilizado para exibir informações detalhadas sobre um objeto do Git, geralmente um commit. Quando executado sem argumentos, ele mostra o commit mais recente:
+
+```bash
+git show
+```
+
+Por padrão, a saída inclui:
+
+- o identificador (hash) do commit;
+- o autor;
+- a data;
+- a mensagem do commit;
+- o patch com as alterações realizadas.
+
+![Saída do comando git show](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/bc44db11-c09e-47c0-8aa3-ecf4954e9359)
+
+Para inspecionar um commit específico, basta informar seu hash:
+
+```bash
+git show <hash-do-commit>
+```
+
+Por exemplo:
+
+```bash
+git show fdf5493
+```
+
+Diferentemente de `git log -p <hash>`, que começa no commit indicado e continua exibindo os commits anteriores, `git show <hash>` apresenta somente o commit especificado.
+
+O comando também pode ser combinado com diferentes opções:
+
+```bash
+# Mostra um resumo dos arquivos e das linhas alteradas
+git show --stat <hash-do-commit>
+
+# Mostra as estatísticas e o patch
+git show --stat -p <hash-do-commit>
+
+# Ignora alterações relacionadas apenas a espaços em branco
+git show -w <hash-do-commit>
+```
+
+> :bulb:`git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
 ### 4.7. git show
 O comando `git show` é usado para **mostrar detalhes sobre um objeto específico no Git, geralmente um commit**. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
   ```bash
