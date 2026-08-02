@@ -161,6 +161,8 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
   ```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
+> :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
+
 - Comparação entre `git log` e `git log --oneline`:
 
 ![oneline](https://github.com/user-attachments/assets/b68b837d-28c6-4c7c-b4b8-608d39491aad)
@@ -268,7 +270,7 @@ Como as linhas de contexto existem nas duas versões, elas recebem simultaneamen
 
 Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas. Por isso, o trecho passou de 6 linhas na versão anterior para 11 linhas na nova versão: 11 = 6 + 5
 
-### Resumo dos sinais do patch
+#### Resumo dos sinais do patch
 
 | Símbolo | Significado |
 |:---:|---|
@@ -278,8 +280,6 @@ Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas
 | `---` | Identificação do arquivo anterior |
 | `+++` | Identificação do novo arquivo |
 | `@@` | Delimitação do cabeçalho do trecho alterado |
-
-> :bulb:`git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 #### 4.6.1. Teclas de atalho
 > O Git utiliza um programa chamado `less` como **paginador** (*pager*). O `less` permite navegar pelo conteúdo utilizando o teclado, avançando ou retornando linhas e páginas, além de possibilitar a pesquisa de textos. Enquanto o paginador estiver aberto, o terminal não estará travado: basta pressionar `q` para encerrá-lo e retornar ao prompt de comandos.
