@@ -185,7 +185,7 @@ Center content on page
 
 Esse commit modificou o arquivo `css/app.css`.
 
-#### A — Identificação do arquivo comparado
+#### A) Identificação do arquivo comparado
 
 ```text
 diff --git a/css/app.css b/css/app.css
@@ -200,20 +200,20 @@ Por convenção:
 
 As letras `a` e `b` não fazem parte do nome original do arquivo. Elas são prefixos utilizados pelo Git para diferenciar as duas versões.
 
-#### B — Identificadores das versões do arquivo
+#### B) Identificadores das versões do arquivo
 
 ```text
 index 07c36fa..3cbd0b8 100644
 ```
 
-Os valores `07c36fa` e `3cbd0b8` são identificadores abreviados das versões do conteúdo do arquivo:
+Os valores `07c36fa` e `3cbd0b8` são identificadores abreviados (hash) das versões do conteúdo do arquivo:
 
 - `07c36fa`: conteúdo anterior;
 - `3cbd0b8`: conteúdo posterior.
 
 O número `100644` representa o modo do arquivo. Nesse caso, indica que se trata de um arquivo comum e não executável.
 
-#### C — Arquivo anterior e arquivo posterior
+#### C) Arquivo anterior e arquivo posterior
 
 ```text
 --- a/css/app.css
@@ -227,7 +227,7 @@ Essas linhas identificam as duas versões utilizadas na comparação:
 
 É importante não confundir esses três sinais com os sinais usados nas linhas individuais do patch. No conteúdo do patch, um único `+` indica uma linha adicionada e um único `-` indica uma linha removida.
 
-#### D — Cabeçalho do trecho alterado
+#### D) Cabeçalho do trecho alterado
 
 ```text
 @@ -38,6 +38,11 @@
