@@ -343,14 +343,6 @@ git show -w <hash-do-commit>
 ```
 
 > :bulb:`git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
-### 4.7. git show
-O comando `git show` é usado para **mostrar detalhes sobre um objeto específico no Git, geralmente um commit**. A saída padrão do git show inclui o diff (as diferenças nas mudanças) introduzido por um commit específico, além das informações básicas do commit (como hash, autor, data e mensagem).
-  ```bash
-    git show
-  ```
-![gitShow](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/bc44db11-c09e-47c0-8aa3-ecf4954e9359)
-
-:bulb:`git show`: Mais adequado para inspecionar um commit específico em detalhe. Mostra não só as informações do commit, mas também o conteúdo das mudanças realizadas (diff). É uma ferramenta de inspeção profunda para um commit único.
 
 ### 4.8. git help
 Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos. Um sinal de adição (+) é exibido na frente das linhas que foram adicionadas e um sinal de subtração (-) indica as linhas que foram excluídas.
