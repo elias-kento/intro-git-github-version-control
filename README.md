@@ -91,56 +91,7 @@ Este comando mostra o **estado atual** do seu repositório Git, incluindo arquiv
   ```
 ![status](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/90bab51a-8b7a-497c-91b5-8b1527633c90)
 
-### 4.3. git add
-Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
-  ```bash
-    git add new-text-file.txt
-  ```
-| Comando       | Novos Arquivos | Arquivos Modificados | Arquivos Removidos | Escopo                           |
-|---------------|----------------|----------------------|--------------------|----------------------------------|
-| `git add .`   | Sim            | Sim                  | Não                | Diretório atual e subdiretórios  |
-| `git add -A`  | Sim            | Sim                  | Sim                | Todo o repositório               |
-
-### 4.4. git commit
-Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
-  ```bash
-    git commit -m "message"
-  ```
-
-#### 4.4.1. git commit --amend --no-edit
-Este comando é usado para modificar o último commit no seu repositório Git sem alterar sua mensagem de commit. Isso é útil quando você deseja adicionar mais mudanças ao commit mais recente ou corrigir algo que você esqueceu de incluir.
-
-  ```bash
-    # Passo 1: Crie e commite o arquivo inicialmente
-    echo "Conteúdo inicial" > arquivo1.txt
-    git add arquivo1.txt
-    git commit -m "Adicionar arquivo1.txt com conteúdo inicial"
-    
-    # Passo 2: Perceba que esqueceu de adicionar mais conteúdo
-    
-    # Passo 3: Faça a alteração esquecida em arquivo1.txt
-    echo "Conteúdo adicional" >> arquivo1.txt
-    
-    # Passo 4: Adicione a alteração ao índice
-    git add arquivo1.txt
-    
-    # Passo 5: Emende o commit anterior
-    git commit --amend --no-edit
-   ```
-:warning: É uma péssima ideia alterar os commits que foram compartilhados com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
-
-### 4.5. git diff
-O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
-  ```bash
-    # Mostra alterações não preparadas para commit
-    git diff
-    # Mostra todas as mudanças desde o último commit, incluindo as que estão no índice e as que ainda não estão
-    git diff HEAD
-    # Mostra alterações feitas no último commit
-    git diff HEAD^
-  ```
-
-### 4.6. git log
+### 4.3. git log
 O comando `git log` é utilizado para **exibir o histórico de commits** de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
   ```bash
     # Mostra o histórico de commits de forma padrão
@@ -281,7 +232,7 @@ Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas
 | `+++` | Identificação do novo arquivo |
 | `@@` | Delimitação do cabeçalho do trecho alterado |
 
-#### 4.6.1. Teclas de atalho
+#### 4.3.1. Teclas de atalho
 > O Git utiliza um programa chamado `less` como **paginador** (*pager*). O `less` permite navegar pelo conteúdo utilizando o teclado, avançando ou retornando linhas e páginas, além de possibilitar a pesquisa de textos. Enquanto o paginador estiver aberto, o terminal não estará travado: basta pressionar `q` para encerrá-lo e retornar ao prompt de comandos.
 
 Principais teclas de navegação do `less`:
@@ -297,7 +248,7 @@ Principais teclas de navegação do `less`:
 - `n` → próxima ocorrência da busca
 - `q` → sair do `git log`
 
-### 4.7. `git show`
+### 4.4. `git show`
 
 O comando `git show` é utilizado para exibir informações detalhadas sobre um objeto do Git, geralmente um commit. Quando executado sem argumentos, ele mostra o commit mais recente:
 
@@ -343,6 +294,55 @@ git show -w <hash-do-commit>
 ```
 
 > :bulb:`git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
+
+### 4.5. git add
+Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
+  ```bash
+    git add new-text-file.txt
+  ```
+| Comando       | Novos Arquivos | Arquivos Modificados | Arquivos Removidos | Escopo                           |
+|---------------|----------------|----------------------|--------------------|----------------------------------|
+| `git add .`   | Sim            | Sim                  | Não                | Diretório atual e subdiretórios  |
+| `git add -A`  | Sim            | Sim                  | Sim                | Todo o repositório               |
+
+### 4.6. git commit
+Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
+  ```bash
+    git commit -m "message"
+  ```
+
+#### 4.6.1. git commit --amend --no-edit
+Este comando é usado para modificar o último commit no seu repositório Git sem alterar sua mensagem de commit. Isso é útil quando você deseja adicionar mais mudanças ao commit mais recente ou corrigir algo que você esqueceu de incluir.
+
+  ```bash
+    # Passo 1: Crie e commite o arquivo inicialmente
+    echo "Conteúdo inicial" > arquivo1.txt
+    git add arquivo1.txt
+    git commit -m "Adicionar arquivo1.txt com conteúdo inicial"
+    
+    # Passo 2: Perceba que esqueceu de adicionar mais conteúdo
+    
+    # Passo 3: Faça a alteração esquecida em arquivo1.txt
+    echo "Conteúdo adicional" >> arquivo1.txt
+    
+    # Passo 4: Adicione a alteração ao índice
+    git add arquivo1.txt
+    
+    # Passo 5: Emende o commit anterior
+    git commit --amend --no-edit
+   ```
+:warning: É uma péssima ideia alterar os commits que foram compartilhados com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
+
+### 4.7. git diff
+O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
+  ```bash
+    # Mostra alterações não preparadas para commit
+    git diff
+    # Mostra todas as mudanças desde o último commit, incluindo as que estão no índice e as que ainda não estão
+    git diff HEAD
+    # Mostra alterações feitas no último commit
+    git diff HEAD^
+  ```
 
 ### 4.8. git help
 Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos. Um sinal de adição (+) é exibido na frente das linhas que foram adicionadas e um sinal de subtração (-) indica as linhas que foram excluídas.
