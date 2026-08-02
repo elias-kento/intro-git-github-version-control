@@ -161,27 +161,21 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
   ```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
-Comparação entre `git log` e `git log --oneline`:
+- Comparação entre `git log` e `git log --oneline`:
 
 ![oneline](https://github.com/user-attachments/assets/b68b837d-28c6-4c7c-b4b8-608d39491aad)
 
-Exemplo de uso do comando `git log --stat`:
+- Exemplo de uso do comando `git log --stat`:
 
 ![stat](https://github.com/user-attachments/assets/a450d83e-7989-4574-a8a3-29c0fc61f2dd)
 
-Exemplo de uso do comando `git log -p`:
+- Exemplo de uso do comando `git log -p`:
 
 ![patch](https://github.com/user-attachments/assets/40a933aa-6044-476f-a774-2cae71cbd162)
 
-> ### Entendendo a saída do comando `git log -p`
+> #### Entendendo a saída do comando `git log -p`
 
-O comando:
-
-```bash
-git log -p
-```
-
-mostra o histórico de commits do repositório e o **patch** associado a cada um deles. Um patch apresenta as diferenças entre a versão anterior e a nova versão dos arquivos modificados pelo commit.
+O comando `git log --stat` mostra o histórico de commits do repositório e o **patch** associado a cada um deles. Um patch apresenta as diferenças entre a versão anterior e a nova versão dos arquivos modificados pelo commit.
 
 Na figura, a área delimitada pelo retângulo roxo corresponde ao patch do commit cuja mensagem é:
 
