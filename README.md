@@ -263,7 +263,7 @@ As linhas que não começam com `+` nem com `-` são chamadas de **linhas de con
 
 Como as linhas de contexto existem nas duas versões, elas recebem simultaneamente:
 
-- uma numeração laranja, referente à versão anterior;
+- uma numeração amarela, referente à versão anterior;
 - uma numeração verde, referente à nova versão.
 
 Neste exemplo, nenhuma linha foi removida. Foram apenas adicionadas cinco linhas. Por isso, o trecho passou de 6 linhas na versão anterior para 11 linhas na nova versão: 11 = 6 + 5
