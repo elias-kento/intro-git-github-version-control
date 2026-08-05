@@ -112,7 +112,7 @@ O comando `git log` é utilizado para **exibir o histórico de commits** de um r
   ```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
-> :bulb: `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
+> :warning: `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
 
 - Comparação entre `git log` e `git log --oneline`:
 
@@ -294,7 +294,7 @@ git show --stat -p <hash-do-commit>
 git show -w <hash-do-commit>
 ```
 
->  `git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
+>  :warning: `git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
 
 ### 4.5. git add
 Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
