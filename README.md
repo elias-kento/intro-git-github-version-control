@@ -296,6 +296,13 @@ git show -w <hash-do-commit>
 
 >  :warning: `git show` é especialmente adequado para analisar um único commit. Ele apresenta tanto as informações básicas do commit quanto o conteúdo das alterações realizadas, permitindo uma inspeção detalhada das mudanças.
 
+#### Resumo dos comandos
+
+Os comandos `git status`, `git log` e `git show` permitem observar diferentes aspectos de um repositório Git. Enquanto `git status` apresenta a **situação atual dos arquivos**, `git log` permite **navegar pelo histórico de commits** e `git show` é utilizado principalmente para **inspecionar detalhadamente um commit específico**.
+
+> **Em resumo:**  
+> `git status` → presente | `git log` → histórico | `git show` → um commit em detalhe
+
 ### 4.5. git add
 Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
   ```bash
