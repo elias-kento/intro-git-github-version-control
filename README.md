@@ -68,6 +68,7 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
     # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
     git push -u origin main
   ```
+> :warning: **Observação:** Caso o comando `git init` seja executado em um diretório que já é um repositório Git, o repositório será **reinicializado**. Os arquivos, commits e o histórico existente são preservados. Na prática, raramente é necessário reinicializar manualmente um repositório; isso pode ocorrer, por exemplo, em scripts automatizados ou para recriar alguns arquivos internos do Git.
 
 ### 3.1. Listar os remotes criados e validar sua URL
   ```bash
