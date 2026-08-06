@@ -305,10 +305,9 @@ Os comandos `git status`, `git log` e `git show` permitem observar diferentes as
 > `git status` → presente | `git log` → histórico | `git show` → um commit em detalhe
 
 ### 4.5. git add
+O comando `git add` é utilizado para adicionar à **Staging Area** as alterações realizadas no **Working Directory**, preparando-as para serem incluídas no próximo commit.
 
-O comando `git add` é utilizado para adicionar à **Staging Area** as alterações que serão incluídas no próximo commit.
-
-O processo de adicionar alterações à Staging Area é chamado de **staging**, e uma alteração que já foi adicionada é chamada de **staged**.
+Antes de realizar um commit, é necessário indicar ao Git quais alterações deverão fazer parte dele. Esse processo de adicionar alterações à Staging Area é chamado de **staging**. Uma alteração presente na Staging Area é chamada de **staged**.
 
 Para adicionar um arquivo específico:
 
@@ -316,36 +315,30 @@ Para adicionar um arquivo específico:
 git add new-text-file.txt
 ```
 
-Também é possível adicionar vários arquivos de uma vez:
+Também é possível adicionar vários arquivos de uma só vez:
 
 ```bash
 git add arquivo1.txt arquivo2.txt
 ```
 
-Para adicionar todas as alterações do diretório atual e de seus subdiretórios:
+O ponto (`.`) representa o diretório atual. Dessa forma, o comando abaixo adiciona à Staging Area todas as alterações do diretório atual e de seus subdiretórios:
 
 ```bash
 git add .
 ```
 
-Para adicionar todas as alterações existentes no repositório:
+Já a opção `-A` adiciona todas as alterações existentes no repositório:
 
 ```bash
 git add -A
 ```
 
-| Comando      | Novos Arquivos | Arquivos Modificados | Arquivos Removidos | Escopo                          |
-|--------------|-----------------|----------------------|--------------------|---------------------------------|
-| `git add .`  | Sim             | Sim                  | Sim                | Diretório atual e subdiretórios |
-| `git add -A` | Sim             | Sim                  | Sim                | Todo o repositório              |
+> **Atenção:** ao utilizar `git add .` ou `git add -A`, podem ser adicionadas à Staging Area alterações que você não pretendia incluir no próximo commit. Por isso, é recomendado utilizar `git status` para verificar quais alterações estão na Staging Area.
 
-> **Atenção:** ao utilizar `git add .` ou `git add -A`, alterações que você não pretendia incluir podem ser adicionadas à Staging Area. Utilize `git status` para verificar quais alterações estão preparadas para o próximo commit.
+#### 4.5.1. Unstage
+Caso uma alteração seja adicionada à Staging Area por engano, é possível removê-la antes de realizar o commit. Esse processo é chamado de **unstage**.
 
-#### Unstage
-
-O processo de remover uma alteração da Staging Area é chamado de **unstage**. Essa operação não apaga as alterações realizadas no arquivo.
-
-Para retirar um arquivo da Staging Area:
+Para retirar as alterações de um arquivo da Staging Area, utilize:
 
 ```bash
 git restore --staged <arquivo>
@@ -357,7 +350,9 @@ Por exemplo:
 git restore --staged new-text-file.txt
 ```
 
-Após o comando, as alterações permanecem no **Working Directory**, mas deixam de estar preparadas para o próximo commit.
+O comando não apaga as alterações realizadas no arquivo. Ele apenas as remove da Staging Area, mantendo-as no Working Directory.
+
+> **Dica:** o comando `git status` geralmente informa quais arquivos estão preparados para o próximo commit e sugere o comando apropriado para realizar o *unstage*.
 
 
 
