@@ -305,6 +305,71 @@ Os comandos `git status`, `git log` e `git show` permitem observar diferentes as
 > `git status` → presente | `git log` → histórico | `git show` → um commit em detalhe
 
 ### 4.5. git add
+
+O comando `git add` é utilizado para adicionar à **Staging Area** as alterações que serão incluídas no próximo commit.
+
+O processo de adicionar alterações à Staging Area é chamado de **staging**, e uma alteração que já foi adicionada é chamada de **staged**.
+
+Para adicionar um arquivo específico:
+
+```bash
+git add new-text-file.txt
+```
+
+Também é possível adicionar vários arquivos de uma vez:
+
+```bash
+git add arquivo1.txt arquivo2.txt
+```
+
+Para adicionar todas as alterações do diretório atual e de seus subdiretórios:
+
+```bash
+git add .
+```
+
+Para adicionar todas as alterações existentes no repositório:
+
+```bash
+git add -A
+```
+
+| Comando      | Novos Arquivos | Arquivos Modificados | Arquivos Removidos | Escopo                          |
+|--------------|-----------------|----------------------|--------------------|---------------------------------|
+| `git add .`  | Sim             | Sim                  | Sim                | Diretório atual e subdiretórios |
+| `git add -A` | Sim             | Sim                  | Sim                | Todo o repositório              |
+
+> **Atenção:** ao utilizar `git add .` ou `git add -A`, alterações que você não pretendia incluir podem ser adicionadas à Staging Area. Utilize `git status` para verificar quais alterações estão preparadas para o próximo commit.
+
+#### Unstage
+
+O processo de remover uma alteração da Staging Area é chamado de **unstage**. Essa operação não apaga as alterações realizadas no arquivo.
+
+Para retirar um arquivo da Staging Area:
+
+```bash
+git restore --staged <arquivo>
+```
+
+Por exemplo:
+
+```bash
+git restore --staged new-text-file.txt
+```
+
+Após o comando, as alterações permanecem no **Working Directory**, mas deixam de estar preparadas para o próximo commit.
+
+
+
+
+
+
+
+
+
+
+
+### 4.5. git add
 Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
   ```bash
     git add new-text-file.txt
