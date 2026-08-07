@@ -7,7 +7,7 @@ Tutorial de uso do Git e GitHub.
   ```bash
     # git --version
   ```
-![version](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/4d425bfe-d882-4ce0-bbdc-25502103c251)
+![version](https://github.com/user-attachments/assets/e7026d4d-d996-4db4-a679-570a407d20d6)
 
 ### 1.2. Configure seu perfil do Git
   ```bash
