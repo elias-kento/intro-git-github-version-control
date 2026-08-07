@@ -336,9 +336,10 @@ git add -A
 > **Atenção:** ao utilizar `git add .` ou `git add -A`, podem ser adicionadas à Staging Area alterações que você não pretendia incluir no próximo commit. Por isso, é recomendado utilizar `git status` para verificar quais alterações estão na Staging Area.
 
 #### 4.5.1. Unstage
-Caso uma alteração seja adicionada à Staging Area por engano, é possível removê-la antes de realizar o commit. Esse processo é chamado de **unstage**.
 
-Para retirar as alterações de um arquivo da Staging Area, utilize:
+Caso uma alteração seja adicionada à **Staging Area** por engano, é possível removê-la antes de realizar o commit. Esse processo é chamado de **unstage**.
+
+Se o repositório **já possui pelo menos um commit**, para retirar as alterações de um arquivo da Staging Area, utilize:
 
 ```bash
 git restore --staged <arquivo>
@@ -350,29 +351,23 @@ Por exemplo:
 git restore --staged new-text-file.txt
 ```
 
-O comando não apaga as alterações realizadas no arquivo. Ele apenas as remove da Staging Area, mantendo-as no Working Directory.
+Esse comando desfaz o efeito do `git add` sobre a Staging Area, sem apagar as alterações realizadas no arquivo. As alterações permanecem no **Working Directory**.
 
-> **Dica:** o comando `git status` geralmente informa quais arquivos estão preparados para o próximo commit e sugere o comando apropriado para realizar o *unstage*.
+No entanto, se o repositório **ainda não possui nenhum commit**, o Git pode sugerir o comando:
 
+```bash
+git rm --cached <arquivo>
+```
 
+Por exemplo:
 
+```bash
+git rm --cached new-text-file.txt
+```
 
+Nesse caso, o arquivo é removido da Staging Area, mas **permanece no Working Directory**. Isso ocorre porque ainda não existe um commit anterior (`HEAD`) que possa ser utilizado pelo `git restore --staged` como referência.
 
-
-
-
-
-
-
-### 4.5. git add
-Utilizado para adicionar mudanças feitas nos arquivos ao índice do Git, preparando-as para serem incluídas no próximo commit.
-  ```bash
-    git add new-text-file.txt
-  ```
-| Comando       | Novos Arquivos | Arquivos Modificados | Arquivos Removidos | Escopo                           |
-|---------------|----------------|----------------------|--------------------|----------------------------------|
-| `git add .`   | Sim            | Sim                  | Não                | Diretório atual e subdiretórios  |
-| `git add -A`  | Sim            | Sim                  | Sim                | Todo o repositório               |
+> **Dica:** utilize `git status` para verificar o estado dos arquivos. Além de mostrar quais alterações estão na Staging Area, o Git geralmente indica o comando apropriado para realizar o *unstage*.
 
 ### 4.6. git commit
 Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
