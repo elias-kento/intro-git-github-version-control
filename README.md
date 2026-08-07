@@ -369,7 +369,7 @@ Nesse caso, o arquivo é removido da Staging Area, mas **permanece no Working Di
 
 > **Dica:** utilize `git status` para verificar o estado dos arquivos. Além de mostrar quais alterações estão na Staging Area, o Git geralmente indica o comando apropriado para realizar o *unstage*.
 
-![unstage](https://github.com/user-attachments/assets/0c97f28a-d69d-4060-9d51-ecaedfb437c5)
+![unstage](https://github.com/user-attachments/assets/079403b0-8a14-45ff-9fe0-e77922025c0b)
 
 ### 4.6. git commit
 Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
