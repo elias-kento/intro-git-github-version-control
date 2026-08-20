@@ -280,7 +280,7 @@ Por exemplo:
 git show fdf5493
 ```
 
-Diferentemente de `git log -p <hash>`, que começa no commit indicado e continua exibindo os commits anteriores, `git show <hash>` apresenta somente o commit especificado.
+O `git log -p <hash>` e o `git show <hash>` exibem basicamente as mesmas informações. A principal diferença é que o `git log -p <hash>` começa no commit indicado e continua exibindo os commits anteriores, enquanto o `git show <hash>` apresenta somente o commit especificado.
 
 O comando também pode ser combinado com diferentes opções:
 
