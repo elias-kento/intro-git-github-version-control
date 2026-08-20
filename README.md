@@ -33,7 +33,13 @@ Tutorial de uso do Git e GitHub.
     git config --global color.ui auto
    ```
 
-### 1.4. Reveja todas as opções de configuração
+### 1.4. Configure o Code Editor
+  ```bash
+    # Associar o VSCode com o Git
+    git config --global core.editor "code --wait"
+   ```
+
+### 1.5. Reveja todas as opções de configuração
   ```bash
     # Lista todas as propriedades de configuração
     git config --list
