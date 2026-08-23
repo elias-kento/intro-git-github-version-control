@@ -405,7 +405,7 @@ Este comando é usado para modificar o último commit no seu repositório Git se
    ```
 :warning: É uma péssima ideia alterar os commits que foram compartilhados com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
 
-:link: [How to Write a Git Commit Message](ttps://chris.beams.io/git-commit)
+:link: [How to Write a Git Commit Message](https://chris.beams.io/git-commit)
 
 :link: [Udacity Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
 
