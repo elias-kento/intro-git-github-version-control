@@ -405,6 +405,10 @@ Este comando é usado para modificar o último commit no seu repositório Git se
    ```
 :warning: É uma péssima ideia alterar os commits que foram compartilhados com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
 
+:link: [How to Write a Git Commit Message](ttps://chris.beams.io/git-commit)
+
+:link: [Udacity Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
+
 ### 4.7. git diff
 O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
   ```bash
