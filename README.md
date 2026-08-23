@@ -558,7 +558,8 @@ build/
 **/configuracao.json
 ~~~
 
-:warning: **Atenção:** o `.gitignore` não afeta arquivos que já estão sendo rastreados pelo Git.  
+:warning: **Atenção:** o `.gitignore` não afeta arquivos que já estão sendo rastreados pelo Git.
+
 :link: Modelos de arquivos `.gitignore` para diferentes linguagens e ferramentas podem ser encontrados no repositório [github/gitignore](https://github.com/github/gitignore).
 
 ## 7. Branches
