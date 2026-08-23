@@ -540,6 +540,28 @@ No Git, os arquivos em um repositório podem estar em vários estados possíveis
 ![arquivos](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/5f8a59bd-cfa2-458a-afbc-49ce00da7a07)
 
 ## 6. Ignorar arquivos (.gitignore)
+Nem todos os arquivos de um projeto precisam ser armazenados no repositório. O arquivo `.gitignore`, geralmente localizado na raiz do repositório (mesma pasta que contém o diretório oculto `.git`), permite indicar os arquivos e diretórios que não devem ser rastreados pelo Git.
+
+Cada linha do `.gitignore` representa um nome ou padrão a ser ignorado. Por exemplo:
+
+~~~gitignore
+# Ignora todos os arquivos com extensão .log
+*.log
+
+# Ignora arquivos JPG diretamente dentro da pasta imagens
+imagens/*.jpg
+
+# Ignora a pasta build e todo o seu conteúdo
+build/
+
+# Ignora arquivos chamados configuracao.json em qualquer diretório
+**/configuracao.json
+~~~
+
+:warning: **Atenção:** o `.gitignore` não afeta arquivos que já estão sendo rastreados pelo Git.
+:link: Modelos de arquivos `.gitignore` para diferentes linguagens e ferramentas podem ser encontrados no repositório [github/gitignore](https://github.com/github/gitignore).
+
+Modelos prontos para diferentes linguagens e ferramentas podem ser encontrados no repositório [github/gitignore](https://github.com/github/gitignore).
 *.gitignore* é um arquivo muito importante no mundo do Git, porque impede que arquivos incorretos sejam enviados para o controle de versão. Os arquivos *.gitignore* clichês podem ser encontrados [AQUI](https://github.com/github/gitignore).
 
 ## 7. Branches
