@@ -785,6 +785,8 @@ Por padrão, o `git log` apresenta somente os commits acessíveis a partir do br
 git log --oneline --decorate --graph --all
 ```
 
+![git_log](https://github.com/user-attachments/assets/cb2753a0-d1a2-477b-92de-4478eb6a914a)
+
 Nesse comando:
 
 - `--oneline` exibe cada commit em uma única linha;
