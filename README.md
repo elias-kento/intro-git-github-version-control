@@ -675,7 +675,6 @@ git push origin --delete v1.0
 > **Em resumo:**  
 > `git tag -a` → cria uma tag anotada | `git tag` → lista as tags | `git show` → inspeciona uma tag | `git push origin` → publica uma tag
 
-````markdown
 ## 8. Branches
 Um **branch** é uma ramificação do histórico do projeto. Ele permite desenvolver novas funcionalidades, corrigir erros ou realizar experimentos de forma isolada, sem alterar imediatamente o branch principal.
 
