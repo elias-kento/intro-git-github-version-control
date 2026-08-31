@@ -562,40 +562,153 @@ build/
 
 :link: Modelos de arquivos `.gitignore` para diferentes linguagens e ferramentas podem ser encontrados no repositório [github/gitignore](https://github.com/github/gitignore).
 
-## 7. Branches
+## 7. Tags
+Uma **tag** é um rótulo utilizado para identificar um commit específico no histórico do repositório. Ela permite identificar pontos importantes do projeto com nomes fáceis de reconhecer, como versões lançadas (`v1.0`, `v1.1` e `v2.0`).
+
+Diferentemente de um branch, uma tag normalmente permanece apontando para o mesmo commit. Por esse motivo, é adequada para marcar versões estáveis, entregas ou outros marcos do projeto.
+
+### 7.1. Criando uma Tag Anotada
+As **tags anotadas** armazenam informações adicionais, como o nome e o e-mail de quem criou a tag, a data e uma mensagem. Para criar uma tag anotada no commit atual, utilize a opção `-a`:
+
+```bash
+git tag -a v1.0
+```
+
+Esse comando cria uma tag chamada `v1.0` e abre o editor de texto configurado no Git para que seja inserida uma mensagem.
+
+![tag](https://github.com/user-attachments/assets/2cb9ef3a-3f2c-436a-92de-eb39547e22a2)
+
+No editor, escreva a mensagem da tag em uma linha que não comece com #, por exemplo:
+
+![tag02](https://github.com/user-attachments/assets/3c7158e1-01eb-42bd-b68c-78934cbe8dd6)
+
+Depois:
+
+1. Salve o arquivo com Ctrl + S;
+2. Feche a aba ou a janela aberta pelo Git.
+
+Após o fechamento do editor, a tag será criada.
+
+![tag03](https://github.com/user-attachments/assets/f34c4e22-afe6-4b3e-a341-4dd967bbdc6f)
+
+Também é possível informar a mensagem diretamente no comando com a opção `-m`:
+
+```bash
+git tag -a v1.0 -m "Primeira versão estável"
+```
+
+:warning: Além das tags anotadas, o Git permite criar uma **tag leve** (*lightweight tag*), que funciona apenas como um marcador apontando para determinado commit. Ela é criada sem a opção `-a`:
+
+```bash
+git tag v1.0
+```
+
+Uma **tag leve** não permite armazenar uma mensagem própria. Ao utilizar a opção `-m`, o Git cria uma tag anotada automaticamente.
+
+### 7.2. Criando uma Tag em um Commit Anterior
+Por padrão, a tag é associada ao commit atual (`HEAD`). Para marcar um commit anterior, informe o hash do commit:
+
+```bash
+git tag -a v0.9 <hash-do-commit> -m "Versão de testes"
+```
+
+Por exemplo:
+
+```bash
+git tag -a v0.9 fdf5493 -m "Versão de testes"
+```
+
+O hash pode ser localizado utilizando:
+
+```bash
+git log --oneline
+```
+
+### 7.3. Listando as Tags
+Para listar todas as tags existentes no repositório:
+
+```bash
+git tag
+```
+
+Também é possível filtrar as tags por um padrão. O comando abaixo lista apenas as tags que começam com `v1.`:
+
+```bash
+git tag -l "v1.*"
+```
+
+### 7.4. Exibindo as Informações de uma Tag
+O comando `git show` permite visualizar as informações armazenadas na tag e o commit para o qual ela aponta:
+
+```bash
+git show v1.0
+```
+
+### 7.5. Enviando Tags para o Repositório Remoto
+As tags criadas localmente não são enviadas automaticamente por um `git push` comum. Para enviar uma tag específica ao repositório remoto:
+
+```bash
+git push origin v1.0
+```
+
+Para enviar todas as tags locais que ainda não existem no repositório remoto:
+
+```bash
+git push origin --tags
+```
+
+> :warning: Antes de publicar uma tag, verifique se ela aponta para o commit correto. Tags publicadas costumam representar versões permanentes do projeto.
+
+### 7.6. Excluindo uma Tag
+Para excluir uma tag apenas do repositório local:
+
+```bash
+git tag -d v1.0
+```
+
+Se a tag já tiver sido enviada ao repositório remoto, ela também deverá ser excluída remotamente:
+
+```bash
+git push origin --delete v1.0
+```
+
+> **Em resumo:**  
+> `git tag -a` → cria uma tag anotada | `git tag` → lista as tags | `git show` → inspeciona uma tag | `git push origin` → publica uma tag
+
+## 8. Branches
 Um branch no Git é uma ramificação do projeto principal, permitindo que os desenvolvedores trabalhem em funcionalidades novas, correções de bugs ou experimentações de forma isolada do código principal.
 
-### 7.1. Criando um Novo Branch
+### 8.1. Criando um Novo Branch
 Criando um novo branch chamado `testing`:
   ```bash
     git branch testing
   ```
 
-### 7.2. Alternando entre Branches
+### 8.2. Alternando entre Branches
 Vamos mudar para o novo branch `testing`:
   ```bash
     git checkout testing
   ```
 
-### 7.3. Criando e Alternando para Branch
+### 8.3. Criando e Alternando para Branch
 Vamos criar e mudar para o novo branch `testing`:
   ```bash
     git checkout -b testing
   ```
 
-### 7.4. Excluindo um Branch
+### 8.4. Excluindo um Branch
 Excluir o branch `testing`:
   ```bash
     git branch -D testing
   ```
 
-### 7.5. Comandos para visualizar a organização dos Branches
+### 8.5. Comandos para visualizar a organização dos Branches
   ```bash
     git log --oneline --decorate
     git log --oneline --decorate --graph --all
   ```
 
-### 7.6. Mesclagem (Merge)
+### 8.6. Mesclagem (Merge)
 - Primeiro, certifique-se de estar na branch em que você deseja realizar a mesclagem. Por exemplo, se você deseja mesclar mudanças da branch `feature` para a branch `main`, você deve estar na branch `main`.
   ```bash
     git checkout main
