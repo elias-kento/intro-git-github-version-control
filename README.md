@@ -675,48 +675,150 @@ git push origin --delete v1.0
 > **Em resumo:**  
 > `git tag -a` → cria uma tag anotada | `git tag` → lista as tags | `git show` → inspeciona uma tag | `git push origin` → publica uma tag
 
+````markdown
 ## 8. Branches
-Um branch no Git é uma ramificação do projeto principal, permitindo que os desenvolvedores trabalhem em funcionalidades novas, correções de bugs ou experimentações de forma isolada do código principal.
+Um **branch** é uma ramificação do histórico do projeto. Ele permite desenvolver novas funcionalidades, corrigir erros ou realizar experimentos de forma isolada, sem alterar imediatamente o branch principal.
 
-### 8.1. Criando um Novo Branch
-Criando um novo branch chamado `testing`:
-  ```bash
-    git branch testing
-  ```
+Cada branch aponta para um commit específico. Quando um novo commit é realizado no branch atual, esse apontador avança para o novo commit.
 
-### 8.2. Alternando entre Branches
-Vamos mudar para o novo branch `testing`:
-  ```bash
-    git checkout testing
-  ```
+### 8.1. Listando os Branches
+Para listar os branches existentes no repositório:
 
-### 8.3. Criando e Alternando para Branch
-Vamos criar e mudar para o novo branch `testing`:
-  ```bash
-    git checkout -b testing
-  ```
+```bash
+git branch
+```
+
+O branch atual é identificado por um asterisco (`*`):
+
+```text
+  main
+* testing
+```
+
+Nesse exemplo, `testing` é o branch atualmente selecionado.
+
+### 8.2. Criando um Novo Branch
+Para criar um branch chamado `testing` a partir do commit atual:
+
+```bash
+git branch testing
+```
+
+Esse comando cria o branch, mas não muda automaticamente para ele.
+
+Também é possível criar um branch a partir de um commit anterior. Para isso, informe o hash do commit:
+
+```bash
+git branch testing <hash-do-commit>
+```
+
+Por exemplo:
+
+```bash
+git branch testing fdf5493
+```
+
+O hash pode ser localizado utilizando:
+
+```bash
+git log --oneline
+```
+
+Para criar um branch e mudar para ele em um único comando, utilize:
+
+```bash
+git checkout -b testing
+```
+
+Esse comando equivale a executar:
+
+```bash
+git branch testing
+git checkout testing
+```
+
+### 8.3. Alternando entre Branches
+Para mudar para o branch `testing`:
+
+```bash
+git checkout testing
+```
+
+Ao alternar entre branches, o Git atualiza os arquivos do **Working Directory** para representar o estado do branch selecionado.
+
+> :warning: Antes de mudar de branch, verifique o estado do repositório com `git status`. Alterações ainda não confirmadas podem impedir a troca de branch ou permanecer no **Working Directory** após a mudança.
 
 ### 8.4. Excluindo um Branch
-Excluir o branch `testing`:
-  ```bash
-    git branch -D testing
-  ```
+Antes de excluir um branch, é importante verificar se seus commits já foram incorporados ao branch em que você está trabalhando. Por exemplo, se as alterações do branch `testing` já foram incorporadas ao branch `main`, o branch `testing` pode ser excluído sem que essas alterações sejam perdidas.
 
-### 8.5. Comandos para visualizar a organização dos Branches
-  ```bash
-    git log --oneline --decorate
-    git log --oneline --decorate --graph --all
-  ```
+Primeiro, mude para outro branch, pois o Git não permite excluir o branch atualmente selecionado:
 
-### 8.6. Mesclagem (Merge)
-- Primeiro, certifique-se de estar na branch em que você deseja realizar a mesclagem. Por exemplo, se você deseja mesclar mudanças da branch `feature` para a branch `main`, você deve estar na branch `main`.
-  ```bash
-    git checkout main
-  ```
-- Em seguida, execute o comando `git merge` seguido do nome da branch que você deseja mesclar. Neste caso, a branch `feature`.
-  ```bash
-    git merge feature
-  ```
+```bash
+git checkout main
+```
+
+Em seguida, para excluir o branch `testing` de maneira segura:
+
+```bash
+git branch -d testing
+```
+
+A opção `-d` somente permite a exclusão se os commits do branch `testing` já tiverem sido incorporados ao branch atual. Caso ainda existam commits não incorporados, o Git impedirá a exclusão para evitar que essas alterações sejam perdidas.
+
+Para forçar a exclusão, mesmo que existam commits ainda não incorporados:
+
+```bash
+git branch -D testing
+```
+
+> :warning: A opção `-D` força a exclusão do branch e pode dificultar a recuperação de commits que ainda não tenham sido incorporados a outro branch. Utilize-a apenas quando tiver certeza de que essas alterações não serão mais necessárias.
+
+### 8.5. Visualizando a Organização dos Branches
+O comando abaixo mostra o histórico resumido e indica os branches e as tags associados aos commits:
+
+```bash
+git log --oneline --decorate
+```
+
+Por padrão, o `git log` apresenta somente os commits acessíveis a partir do branch atual. Para representar graficamente as ramificações e mostrar todos os branches:
+
+```bash
+git log --oneline --decorate --graph --all
+```
+
+Nesse comando:
+
+- `--oneline` exibe cada commit em uma única linha;
+- `--decorate` mostra os nomes dos branches e das tags;
+- `--graph` representa graficamente as ramificações;
+- `--all` inclui todos os branches na visualização.
+
+### 8.6. Mesclagem (*Merge*)
+A mesclagem permite incorporar as alterações de um branch em outro.
+
+Por exemplo, para incorporar as alterações do branch `feature` ao branch `main`, primeiro mude para o branch que receberá as alterações:
+
+```bash
+git checkout main
+```
+
+Em seguida, execute `git merge`, indicando o branch cujas alterações serão incorporadas:
+
+```bash
+git merge feature
+```
+
+Nesse exemplo, os commits do branch `feature` são incorporados ao histórico do branch `main`.
+
+Após verificar que a mesclagem foi concluída corretamente, o branch `feature` poderá ser excluído:
+
+```bash
+git branch -d feature
+```
+
+> **Em resumo:**  
+> `git branch` → lista os branches | `git branch <nome>` → cria um branch | `git checkout <nome>` → muda de branch | `git checkout -b <nome>` → cria e muda de branch | `git branch -d <nome>` → exclui um branch com segurança | `git merge <nome>` → incorpora outro branch ao branch atual
+  
 ## X. Observações
 1. As pessoas costumam se surpreender quando descobrem que o Git não considera a adição de um diretório vazio como sendo uma alteração. Isso ocorre porque o Git controla apenas as alterações em *arquivos*, não em diretórios.
 
