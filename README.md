@@ -787,6 +787,8 @@ git log --oneline --decorate --graph --all
 
 ![git_log](https://github.com/user-attachments/assets/cb2753a0-d1a2-477b-92de-4478eb6a914a)
 
+![git_log02](https://github.com/user-attachments/assets/276945a6-6410-41a5-81b9-e7aa3ab120b7)
+
 Nesse comando:
 
 - `--oneline` exibe cada commit em uma única linha;
