@@ -436,7 +436,7 @@ O comando `git diff` é utilizado para comparar alterações entre commits, bran
 No comando abaixo, a ordem dos commits determina o sentido da comparação:
 
 ```bash
-git diff <commit-1> <commit-2>
+  git diff <commit-1> <commit-2>
 ```
 
 O `<commit-1>` é utilizado como versão inicial, enquanto o `<commit-2>` é utilizado como versão final. Portanto, a saída mostra as alterações necessárias para transformar o conteúdo do primeiro commit no conteúdo do segundo:
