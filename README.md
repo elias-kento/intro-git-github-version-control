@@ -4,16 +4,16 @@ Tutorial de uso do Git e GitHub.
 ## 1. Configurando o Git
 
 ### 1.1. Verificar a versão do Git instalada
-  ```bash
-    git --version
-  ```
+```bash
+git --version
+```
 ![version](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/4d425bfe-d882-4ce0-bbdc-25502103c251)
 
 ### 1.2. Configure seu perfil do Git
-  ```bash
-    # Configura o Git com seu nome
-    git config --global user.name "<Your-Full-Name>"
-  ```
+```bash
+# Configura o Git com seu nome
+git config --global user.name "<Your-Full-Name>"
+```
   ```bash
     # Exemplo
     git config --global user.name "Robert Oppenheimer"
