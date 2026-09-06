@@ -426,12 +426,10 @@ O comando `git diff` é utilizado para comparar alterações entre commits, bran
     # Mostra as alterações introduzidas pelo último commit
     git diff HEAD^ HEAD
     
-    # Compara dois commits, mostrando as alterações necessárias
-    # para transformar o primeiro no segundo
+    # Compara dois commits
     git diff <commit-1> <commit-2>
     
-    # Compara os commits apontados por dois branches, mostrando as
-    # alterações necessárias para transformar o primeiro no segundo
+    # Compara os commits apontados por dois branches
     git diff <branch-1> <branch-2>
   ```
 
@@ -442,7 +440,6 @@ git diff <commit-1> <commit-2>
 ```
 
 O `<commit-1>` é utilizado como versão inicial, enquanto o `<commit-2>` é utilizado como versão final. Portanto, a saída mostra as alterações necessárias para transformar o conteúdo do primeiro commit no conteúdo do segundo:
-
 ```text
 commit-1 → commit-2
 ```
