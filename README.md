@@ -5,7 +5,7 @@ Tutorial de uso do Git e GitHub.
 
 ### 1.1. Verificar a versão do Git instalada
   ```bash
-    # git --version
+    git --version
   ```
 ![version](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/4d425bfe-d882-4ce0-bbdc-25502103c251)
 
