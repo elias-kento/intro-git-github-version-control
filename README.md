@@ -496,7 +496,7 @@ A diferença é que `git show HEAD` também apresenta informações como o autor
 | `git diff <commit-1> <commit-2>` | Primeiro commit → segundo commit |
 | `git diff <branch-1> <branch-2>` | Primeiro branch → segundo branch |
 | `git show HEAD` | Informações e alterações do último commit |
-````
+
 
 ### 4.8. git help
 O comando `git help` permite acessar a documentação dos comandos do Git.
