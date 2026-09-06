@@ -421,12 +421,25 @@ O comando `git diff` é utilizado no Git para comparar alterações entre commit
   ```
 
 ### 4.8. git help
-Abre o manual de ajuda do Git, fornecendo informações detalhadas sobre diversos comandos e conceitos. Um sinal de adição (+) é exibido na frente das linhas que foram adicionadas e um sinal de subtração (-) indica as linhas que foram excluídas.
+O comando `git help` permite acessar a documentação dos comandos do Git.
   ```bash
     git help
   ```
 
 ![help](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/151b65d6-f140-4c8c-85a6-37c54f720f7d)
+
+Para consultar a ajuda de um comando específico, informe seu nome.
+  ```bash
+    git help commit
+    git help merge
+    git help diff
+  ```
+
+Também é possível usar:
+  ```bash
+    git commit --help
+    git merge --help
+  ```
 
 ### 4.9. git clone
 O comando `git clone` é utilizado para criar uma cópia local de um repositório remoto. Ao executar esse comando, o Git baixa todos os arquivos, branches e o histórico de commits do repositório para o seu computador.
