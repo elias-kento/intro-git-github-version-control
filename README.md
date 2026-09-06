@@ -410,15 +410,93 @@ Este comando é usado para modificar o último commit no seu repositório Git se
 :link: [Udacity Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
 
 ### 4.7. git diff
-O comando `git diff` é utilizado no Git para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
+O comando `git diff` é utilizado para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
   ```bash
-    # Mostra alterações não preparadas para commit
+    # Mostra as alterações no Working Directory que ainda não foram
+    # adicionadas à Staging Area
     git diff
-    # Mostra todas as mudanças desde o último commit, incluindo as que estão no índice e as que ainda não estão
+    
+    # Mostra as alterações que já foram adicionadas à Staging Area
+    git diff --staged
+    
+    # Compara o último commit com o estado atual dos arquivos,
+    # incluindo as alterações preparadas e não preparadas
     git diff HEAD
-    # Mostra alterações feitas no último commit
-    git diff HEAD^
+    
+    # Mostra as alterações introduzidas pelo último commit
+    git diff HEAD^ HEAD
+    
+    # Compara dois commits, mostrando as alterações necessárias
+    # para transformar o primeiro no segundo
+    git diff <commit-1> <commit-2>
+    
+    # Compara os commits apontados por dois branches, mostrando as
+    # alterações necessárias para transformar o primeiro no segundo
+    git diff <branch-1> <branch-2>
   ```
+
+No comando abaixo, a ordem dos commits determina o sentido da comparação:
+
+```bash
+git diff <commit-1> <commit-2>
+```
+
+O `<commit-1>` é utilizado como versão inicial, enquanto o `<commit-2>` é utilizado como versão final. Portanto, a saída mostra as alterações necessárias para transformar o conteúdo do primeiro commit no conteúdo do segundo:
+
+```text
+commit-1 → commit-2
+```
+
+Na saída do comando:
+
+- as linhas existentes somente no `<commit-1>` são apresentadas com o sinal `-`;
+- as linhas existentes somente no `<commit-2>` são apresentadas com o sinal `+`;
+- as linhas sem `+` ou `-` são linhas de contexto e não foram alteradas.
+
+Por exemplo:
+
+```bash
+git diff 272004a 0c425a4
+```
+
+Esse comando mostra as alterações necessárias para transformar o conteúdo do commit `272004a` no conteúdo do commit `0c425a4`.
+
+Ao inverter a ordem:
+
+```bash
+git diff 0c425a4 272004a
+```
+
+o sentido da comparação também é invertido. Assim, as linhas anteriormente apresentadas como adições passam a ser apresentadas como remoções, e vice-versa.
+
+O caractere `^` em `HEAD^` indica o commit-pai de `HEAD`. Portanto:
+
+```bash
+git diff HEAD^ HEAD
+```
+
+compara o penúltimo commit com o último commit, mostrando as alterações introduzidas pelo último commit.
+
+Também é possível visualizar essas alterações utilizando:
+
+```bash
+git show HEAD
+```
+
+A diferença é que `git show HEAD` também apresenta informações como o autor, a data e a mensagem do commit.
+
+#### Resumo dos comandos
+
+| Comando | Comparação |
+|---|---|
+| `git diff` | Staging Area → Working Directory |
+| `git diff --staged` | Último commit → Staging Area |
+| `git diff HEAD` | Último commit → Working Directory |
+| `git diff HEAD^ HEAD` | Penúltimo commit → último commit |
+| `git diff <commit-1> <commit-2>` | Primeiro commit → segundo commit |
+| `git diff <branch-1> <branch-2>` | Primeiro branch → segundo branch |
+| `git show HEAD` | Informações e alterações do último commit |
+````
 
 ### 4.8. git help
 O comando `git help` permite acessar a documentação dos comandos do Git.
