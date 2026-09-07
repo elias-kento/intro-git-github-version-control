@@ -61,16 +61,22 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 ```bash
 # Criar o arquivo README.md com cabeçalho "# Teste"
 echo "# Teste" >> README.md
+
 # Inicializa um novo repositório Git no diretório atual
 git init
+
 # Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
 git add README.md
+
 # Realiza o commit com uma mensagem de commit "first commit"
 git commit -m "first commit"
+
 # Renomeia a branch padrão de "master" para "main"
 git branch -M main
+
 # Adiciona um repositório remoto chamado "origin" com o URL fornecido
 git remote add origin https://github.com/elias-kento/teste.git
+
 # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
 git push -u origin main
 ```
