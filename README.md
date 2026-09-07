@@ -14,36 +14,36 @@ git --version
 # Configura o Git com seu nome
 git config --global user.name "<Your-Full-Name>"
 ```
-  ```bash
-    # Exemplo
-    git config --global user.name "Robert Oppenheimer"
-  ```
-  ```bash
-    # Configura o Git com seu e-mail
-    git config --global user.email "<your-email-address>"
-  ```
-  ```bash
-    # Exemplo
-    git config --global user.email "robert@oppenheimer.com"
-  ```
+```bash
+# Exemplo
+git config --global user.name "Robert Oppenheimer"
+```
+```bash
+# Configura o Git com seu e-mail
+git config --global user.email "<your-email-address>"
+```
+```bash
+# Exemplo
+git config --global user.email "robert@oppenheimer.com"
+```
 
 ### 1.3. Configure a cor de saída da interface do usuário
-  ```bash
-    # Garante que a saída do Git esteja colorida
-    git config --global color.ui auto
-   ```
+```bash
+# Garante que a saída do Git esteja colorida
+git config --global color.ui auto
+```
 
 ### 1.4. Configure o Code Editor
-  ```bash
-    # Associar o VSCode com o Git
-    git config --global core.editor "code --wait"
-   ```
+```bash
+# Associar o VSCode com o Git
+git config --global core.editor "code --wait"
+```
 
 ### 1.5. Reveja todas as opções de configuração
-  ```bash
-    # Lista todas as propriedades de configuração
-    git config --list
-  ```
+```bash
+# Lista todas as propriedades de configuração
+git config --list
+```
 ![2024-07-21_23-42-01_v05](https://github.com/user-attachments/assets/98e03911-3fd8-44cc-9e8c-f4b9fdd110e0)
 
 ## 2. Trabalhando com um Repositório Local
@@ -58,29 +58,29 @@ O Git acompanha as mudanças no seu código-fonte, permite o versionamento e sup
 ![open](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a3a8fb58-8a6c-4df0-8a44-b1dc96a20909)
 
 ## 3. Criar um novo repositório na linha de comando
-  ```bash
-    # Criar o arquivo README.md com cabeçalho "# Teste"
-    echo "# Teste" >> README.md
-    # Inicializa um novo repositório Git no diretório atual
-    git init
-    # Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
-    git add README.md
-    # Realiza o commit com uma mensagem de commit "first commit"
-    git commit -m "first commit"
-    # Renomeia a branch padrão de "master" para "main"
-    git branch -M main
-    # Adiciona um repositório remoto chamado "origin" com o URL fornecido
-    git remote add origin https://github.com/elias-kento/teste.git
-    # Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
-    git push -u origin main
-  ```
+```bash
+# Criar o arquivo README.md com cabeçalho "# Teste"
+echo "# Teste" >> README.md
+# Inicializa um novo repositório Git no diretório atual
+git init
+# Adiciona o arquivo README.md a "Staging Area" para ser preparado para o commit
+git add README.md
+# Realiza o commit com uma mensagem de commit "first commit"
+git commit -m "first commit"
+# Renomeia a branch padrão de "master" para "main"
+git branch -M main
+# Adiciona um repositório remoto chamado "origin" com o URL fornecido
+git remote add origin https://github.com/elias-kento/teste.git
+# Envia as mudanças do repositório local para o repositório remoto "origin" na branch "main"
+git push -u origin main
+```
 > :warning: **Observação:** Caso o comando `git init` seja executado em um diretório que já é um repositório Git, o repositório será **reinicializado**. Os arquivos, commits e o histórico existente são preservados. Na prática, raramente é necessário reinicializar manualmente um repositório; isso pode ocorrer, por exemplo, em scripts automatizados ou para recriar alguns arquivos internos do Git.
 
 ### 3.1. Listar os remotes criados e validar sua URL
-  ```bash
-    git remote
-    git remote get-url origin
-  ```
+```bash
+git remote
+git remote get-url origin
+```
 ![remote](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/80ad1795-b51d-4d05-aff3-83c9b901af06)
 
 ## 4. Comandos básicos do Git
@@ -93,30 +93,30 @@ No Windows, abre no Explorador de Arquivos a pasta atual do terminal.
 
 ### 4.2. git status
 Este comando mostra o **estado atual** do seu repositório Git, incluindo arquivos modificados, arquivos prontos para serem commitados e outras informações relevantes.
-  ```bash
-    git status
-  ```
+```bash
+git status
+```
 ![status](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/90bab51a-8b7a-497c-91b5-8b1527633c90)
 
 ### 4.3. git log
 O comando `git log` é utilizado para **exibir o histórico de commits** de um repositório. Ele fornece uma lista dos commits anteriores, mostrando informações como o hash do commit, autor, data, e a mensagem do commit.
-  ```bash
-    # Mostra o histórico de commits de forma padrão
-    git log
+```bash
+# Mostra o histórico de commits de forma padrão
+git log
 
-    # Exibe o histórico de commits em uma linha por commit, mostrando um resumo compacto
-    git log --oneline
+# Exibe o histórico de commits em uma linha por commit, mostrando um resumo compacto
+git log --oneline
 
-    # Mostra o patch, isto é, as alterações introduzidas por cada commit (mesmo que --patch)
-    git log -p
+# Mostra o patch, isto é, as alterações introduzidas por cada commit (mesmo que --patch)
+git log -p
 
-    # Filtra os commits pelo nome ou e-mail do autor
-    git log --author="<nome-ou-email>"
+# Filtra os commits pelo nome ou e-mail do autor
+git log --author="<nome-ou-email>"
 
-    # Mostra um resumo das alterações de cada commit, incluindo os arquivos modificados
-    # e a quantidade de linhas adicionadas e removidas
-    git log --stat
-  ```
+# Mostra um resumo das alterações de cada commit, incluindo os arquivos modificados
+# e a quantidade de linhas adicionadas e removidas
+git log --stat
+```
 ![log](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/a1fd2783-3a9b-4b2d-b40d-aff2f8f4b6b3)
 
 > :warning: `git log`: Ideal para revisar o histórico de commits, entender a sequência de mudanças ao longo do tempo e buscar commits específicos com base em critérios como autor, data, ou mensagens de commit. É uma ferramenta de navegação no histórico do repositório.
@@ -379,30 +379,30 @@ Nesse caso, o arquivo é removido da Staging Area, mas **permanece no Working Di
 
 ### 4.6. git commit
 Este comando confirma as mudanças que foram adicionadas ao índice com o `git add`, criando uma nova revisão no histórico do repositório.
-  ```bash
-    git commit -m "message"
-  ```
+```bash
+git commit -m "message"
+```
 
 #### 4.6.1. git commit --amend --no-edit
 Este comando é usado para modificar o último commit no seu repositório Git sem alterar sua mensagem de commit. Isso é útil quando você deseja adicionar mais mudanças ao commit mais recente ou corrigir algo que você esqueceu de incluir.
 
-  ```bash
-    # Passo 1: Crie e commite o arquivo inicialmente
-    echo "Conteúdo inicial" > arquivo1.txt
-    git add arquivo1.txt
-    git commit -m "Adicionar arquivo1.txt com conteúdo inicial"
+```bash
+# Passo 1: Crie e commite o arquivo inicialmente
+echo "Conteúdo inicial" > arquivo1.txt
+git add arquivo1.txt
+git commit -m "Adicionar arquivo1.txt com conteúdo inicial"
     
-    # Passo 2: Perceba que esqueceu de adicionar mais conteúdo
+# Passo 2: Perceba que esqueceu de adicionar mais conteúdo
     
-    # Passo 3: Faça a alteração esquecida em arquivo1.txt
-    echo "Conteúdo adicional" >> arquivo1.txt
+# Passo 3: Faça a alteração esquecida em arquivo1.txt
+echo "Conteúdo adicional" >> arquivo1.txt
     
-    # Passo 4: Adicione a alteração ao índice
-    git add arquivo1.txt
+# Passo 4: Adicione a alteração ao índice
+git add arquivo1.txt
     
-    # Passo 5: Emende o commit anterior
-    git commit --amend --no-edit
-   ```
+# Passo 5: Emende o commit anterior
+git commit --amend --no-edit
+```
 :warning: É uma péssima ideia alterar os commits que foram compartilhados com outro desenvolvedor ou que foram publicados (pushed) em um repositório compartilhado, como o GitHub.
 
 :link: [How to Write a Git Commit Message](https://chris.beams.io/git-commit)
@@ -411,32 +411,32 @@ Este comando é usado para modificar o último commit no seu repositório Git se
 
 ### 4.7. git diff
 O comando `git diff` é utilizado para comparar alterações entre commits, branches, arquivos ou o estado atual do repositório com versões anteriores. Esse comando é essencial para revisar mudanças no código, identificar diferenças e colaborar de maneira eficiente com outros desenvolvedores.
-  ```bash
-    # Mostra as alterações no Working Directory que ainda não foram
-    # adicionadas à Staging Area
-    git diff
+```bash
+# Mostra as alterações no Working Directory que ainda não foram
+# adicionadas à Staging Area
+git diff
     
-    # Mostra as alterações que já foram adicionadas à Staging Area
-    git diff --staged
+# Mostra as alterações que já foram adicionadas à Staging Area
+git diff --staged
     
-    # Compara o último commit com o estado atual dos arquivos,
-    # incluindo as alterações preparadas e não preparadas
-    git diff HEAD
+# Compara o último commit com o estado atual dos arquivos,
+# incluindo as alterações preparadas e não preparadas
+git diff HEAD
     
-    # Mostra as alterações introduzidas pelo último commit
-    git diff HEAD^ HEAD
+# Mostra as alterações introduzidas pelo último commit
+git diff HEAD^ HEAD
     
-    # Compara dois commits
-    git diff <commit-1> <commit-2>
+# Compara dois commits
+git diff <commit-1> <commit-2>
     
-    # Compara os commits apontados por dois branches
-    git diff <branch-1> <branch-2>
-  ```
+# Compara os commits apontados por dois branches
+git diff <branch-1> <branch-2>
+```
 
 No comando abaixo, a ordem dos commits determina o sentido da comparação:
 
 ```bash
-  git diff <commit-1> <commit-2>
+git diff <commit-1> <commit-2>
 ```
 
 O `<commit-1>` é utilizado como versão inicial, enquanto o `<commit-2>` é utilizado como versão final. Portanto, a saída mostra as alterações necessárias para transformar o conteúdo do primeiro commit no conteúdo do segundo:
@@ -497,44 +497,44 @@ A diferença é que `git show HEAD` também apresenta informações como o autor
 
 ### 4.8. git help
 O comando `git help` permite acessar a documentação dos comandos do Git.
-  ```bash
-    git help
-  ```
+```bash
+git help
+```
 
 ![help](https://github.com/elias-kento/intro-git-github-version-control/assets/77618691/151b65d6-f140-4c8c-85a6-37c54f720f7d)
 
 Para consultar a ajuda de um comando específico, informe seu nome.
-  ```bash
-    git help commit
-    git help merge
-    git help diff
-  ```
+```bash
+git help commit
+git help merge
+git help diff
+```
 
 Também é possível usar:
-  ```bash
-    git commit --help
-    git merge --help
-  ```
+```bash
+git commit --help
+git merge --help
+```
 
 ### 4.9. git clone
 O comando `git clone` é utilizado para criar uma cópia local de um repositório remoto. Ao executar esse comando, o Git baixa todos os arquivos, branches e o histórico de commits do repositório para o seu computador.
-  ```bash
-    git clone <url-do-repositorio>
-  ```
+```bash
+git clone <url-do-repositorio>
+```
 
 Exemplo:
-  ```bash
-    git clone https://github.com/udacity/course-git-blog-project
-  ```
+```bash
+git clone https://github.com/udacity/course-git-blog-project
+```
 
 Após executar o comando, uma nova pasta com o nome do repositório será criada automaticamente no diretório atual.
 
 :warning: Antes de utilizar o `git clone`, verifique se o diretório atual do terminal não está dentro de outro repositório Git, evitando criar repositórios aninhados.
 
 Para verificar o diretório atual:
-  ```bash
-    pwd
-  ```
+```bash
+pwd
+```
 
 #### 4.9.1. Evitando repositórios Git aninhados
 Antes de utilizar o comando `git clone`, é importante verificar em qual diretório o terminal está localizado. O comando `git clone` cria automaticamente uma nova pasta contendo um repositório Git.
@@ -543,79 +543,79 @@ Um erro comum é executar o `git clone` dentro de outro repositório Git já exi
 
 #### Cenário correto
 Você já está em uma pasta comum:
-  ```text
-    meu-repo/
-  ```
+```text
+meu-repo/
+```
 
 E executa:
-  ```bash
-    git clone https://github.com/user/app.git
-  ```
+```bash
+git clone https://github.com/user/app.git
+```
 
 Resultado:
-  ```text
-    meu-repo/
-    └── app/
-        └── .git/
-  ```
+```text
+meu-repo/
+└── app/
+    └── .git/
+```
 Tudo certo.
 
 #### Cenário errado
 Você já está dentro de um repositório Git:
-  ```text
-    meu-repo/
-    └── .git/
-  ```
+```text
+meu-repo/
+└── .git/
+```
 
 E executa:
-  ```bash
-    git clone https://github.com/user/app.git
-  ```
+```bash
+git clone https://github.com/user/app.git
+```
 
 Resultado:
-  ```text
-    meu-repo/
+```text
+meu-repo/
+└── .git/
+└── app/
     └── .git/
-    └── app/
-        └── .git/
-  ```
+```
 Agora existe um Git dentro de outro Git.
 
 #### 4.9.2. Clonando para um diretório com outro nome
 Por padrão, o Git cria uma pasta com o mesmo nome do repositório remoto. Porém, é possível definir manualmente o nome da pasta local adicionando um argumento extra ao comando `git clone`.
 
 Você já está em uma pasta comum:
-  ```text
-    meu-repo/
-  ```
+```text
+meu-repo/
+```
 
 E executa:
-  ```bash
-    git clone https://github.com/user/app.git
-  ```
+```bash
+git clone https://github.com/user/app.git
+```
 
 Nesse exemplo, o repositório será clonado para um diretório chamado `app`.
 
 Resultado:
-  ```text
-    meu-repo/
-    └── app/
-        └── .git/
-  ```
+```text
+meu-repo/
+└── app/
+    └── .git/
+```
 
 Mas, se executar:
-  ```bash
-    git clone https://github.com/user/app.git meu_app
-  ```
+```bash
+git clone https://github.com/user/app.git meu_app
+```
 
 O repositório será clonado para um diretório chamado `meu_app`.
 
 Resultado:
-  ```text
-    meu-repo/
-    └── meu_app/
-        └── .git/
-  ```
+```text
+meu-repo/
+└── meu_app/
+    └── .git/
+```
 
 ## 5. Estado dos arquivos
 No Git, os arquivos em um repositório podem estar em vários estados possíveis. Esses estados refletem a situação dos arquivos em relação ao repositório, à área de preparo (staging area) e ao diretório de trabalho (working directory). Aqui estão os principais estados possíveis dos arquivos no Git:
