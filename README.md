@@ -1,6 +1,48 @@
 # Git e GitHub: Primeiros Passos
 Tutorial de uso do Git e GitHub.
 
+## Índice
+
+- [1. Configurando o Git](#1-configurando-o-git)
+  - [1.1. Verificar a versão do Git instalada](#11-verificar-a-versão-do-git-instalada)
+  - [1.2. Configure seu perfil do Git](#12-configure-seu-perfil-do-git)
+  - [1.3. Configure a cor de saída da interface do usuário](#13-configure-a-cor-de-saída-da-interface-do-usuário)
+  - [1.4. Configure o Code Editor](#14-configure-o-code-editor)
+  - [1.5. Reveja todas as opções de configuração](#15-reveja-todas-as-opções-de-configuração)
+- [2. Trabalhando com um Repositório Local](#2-trabalhando-com-um-repositório-local)
+  - [2.1. Inicializando um Repositório Git Local](#21-inicializando-um-repositório-git-local)
+- [3. Criar um novo repositório na linha de comando](#3-criar-um-novo-repositório-na-linha-de-comando)
+  - [3.1. Listar os remotes criados e validar sua URL](#31-listar-os-remotes-criados-e-validar-sua-url)
+- [4. Comandos básicos do Git](#4-comandos-básicos-do-git)
+  - [4.1. start .](#41-start-)
+  - [4.2. git status](#42-git-status)
+  - [4.3. git log](#43-git-log)
+  - [Numeração das linhas](#numeração-das-linhas)
+  - [4.4. `git show`](#44-git-show)
+  - [4.5. git add](#45-git-add)
+  - [4.6. git commit](#46-git-commit)
+  - [4.7. git diff](#47-git-diff)
+  - [4.8. git help](#48-git-help)
+  - [4.9. git clone](#49-git-clone)
+- [5. Estado dos arquivos](#5-estado-dos-arquivos)
+- [6. Ignorar arquivos (.gitignore)](#6-ignorar-arquivos-gitignore)
+- [7. Tags](#7-tags)
+  - [7.1. Criando uma Tag Anotada](#71-criando-uma-tag-anotada)
+  - [7.2. Criando uma Tag em um Commit Anterior](#72-criando-uma-tag-em-um-commit-anterior)
+  - [7.3. Listando as Tags](#73-listando-as-tags)
+  - [7.4. Exibindo as Informações de uma Tag](#74-exibindo-as-informações-de-uma-tag)
+  - [7.5. Enviando Tags para o Repositório Remoto](#75-enviando-tags-para-o-repositório-remoto)
+  - [7.6. Excluindo uma Tag](#76-excluindo-uma-tag)
+- [8. Branches](#8-branches)
+  - [8.1. Listando os Branches](#81-listando-os-branches)
+  - [8.2. Criando um Novo Branch](#82-criando-um-novo-branch)
+  - [8.3. Alternando entre Branches](#83-alternando-entre-branches)
+  - [8.4. Excluindo um Branch](#84-excluindo-um-branch)
+  - [8.5. Visualizando a Organização dos Branches](#85-visualizando-a-organização-dos-branches)
+  - [8.6. Mesclagem (*Merge*)](#86-mesclagem-merge)
+- [X. Observações](#x-observações)
+- [Referências](#referências)
+
 ## 1. Configurando o Git
 
 ### 1.1. Verificar a versão do Git instalada
