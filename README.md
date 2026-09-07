@@ -38,7 +38,7 @@ Tutorial de uso do Git e GitHub.
   - [8.3. Alternando entre Branches](#83-alternando-entre-branches)
   - [8.4. Excluindo um Branch](#84-excluindo-um-branch)
   - [8.5. Visualizando a Organização dos Branches](#85-visualizando-a-organização-dos-branches)
-  - [8.6. Mesclagem (*Merge*)](#86-mesclagem-merge)
+- [9. Merge](#9-merge)
 - [X. Observações](#x-observações)
 - [Referências](#referências)
 
@@ -931,7 +931,7 @@ Nesse comando:
 - `--graph` representa graficamente as ramificações;
 - `--all` inclui todos os branches na visualização.
 
-### 8.6. Mesclagem (*Merge*)
+## 9. Merge
 A mesclagem permite incorporar as alterações de um branch em outro.
 
 Por exemplo, para incorporar as alterações do branch `feature` ao branch `main`, primeiro mude para o branch que receberá as alterações:
