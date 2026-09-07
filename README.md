@@ -18,7 +18,7 @@ Tutorial de uso do Git e GitHub.
   - [4.2. git status](#42-git-status)
   - [4.3. git log](#43-git-log)
   - [Numeração das linhas](#numeração-das-linhas)
-  - [4.4. `git show`](#44-git-show)
+  - [4.4. git show](#44-git-show)
   - [4.5. git add](#45-git-add)
   - [4.6. git commit](#46-git-commit)
   - [4.7. git diff](#47-git-diff)
@@ -304,7 +304,7 @@ Principais teclas de navegação do `less`:
 - `n` → próxima ocorrência da busca
 - `q` → sair do `git log`
 
-### 4.4. `git show`
+### 4.4. git show
 
 O comando `git show` é utilizado para exibir informações detalhadas sobre um objeto do Git, geralmente um commit. Quando executado sem argumentos, ele mostra o commit mais recente:
 
