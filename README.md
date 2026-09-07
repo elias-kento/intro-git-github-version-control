@@ -17,7 +17,6 @@ Tutorial de uso do Git e GitHub.
   - [4.1. start .](#41-start-)
   - [4.2. git status](#42-git-status)
   - [4.3. git log](#43-git-log)
-  - [Numeração das linhas](#numeração-das-linhas)
   - [4.4. git show](#44-git-show)
   - [4.5. git add](#45-git-add)
   - [4.6. git commit](#46-git-commit)
@@ -248,7 +247,7 @@ Essa linha é chamada de **cabeçalho do trecho** ou **cabeçalho do bloco de al
 
 O sinal `-` está relacionado à versão anterior, enquanto o sinal `+` está relacionado à nova versão.
 
-### Numeração das linhas
+#### Numeração das linhas
 
 Na figura, os marcadores coloridos representam a contagem das linhas informada no cabeçalho do trecho:
 
