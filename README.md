@@ -184,11 +184,7 @@ git log --stat
 
 O comando `git log -p` mostra o histórico de commits do repositório e o **patch** associado a cada um deles. Um patch apresenta as diferenças entre a versão anterior e a nova versão dos arquivos modificados pelo commit.
 
-Na figura, a área delimitada pelo retângulo roxo corresponde ao patch do commit cuja mensagem é:
-
-```text
-Center content on page
-```
+Na figura, a área delimitada pelo retângulo roxo corresponde ao patch do commit cuja mensagem é: `Center content on page`
 
 Esse commit modificou o arquivo `css/app.css`.
 
