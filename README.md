@@ -366,6 +366,8 @@ Os comandos `git status`, `git log` e `git show` permitem observar diferentes as
 > **Em resumo:**  
 > `git status` → presente | `git log` → histórico | `git show` → um commit em detalhe
 
+![Comandos Git](https://github.com/elias-kento/intro-git-github-version-control/issues/11#issue-6045984654)
+
 ### 4.5. git add
 O comando `git add` é utilizado para adicionar à **Staging Area** as alterações realizadas no **Working Directory**, preparando-as para serem incluídas no próximo commit.
 
